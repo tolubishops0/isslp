@@ -40,6 +40,13 @@ export const navLinks: NavLink[] = [
 export { default as meshbg } from "../public/assets/meshbg.svg";
 export { default as search } from "../public/assets/search item.svg";
 export { default as help } from "../public/assets/help.svg";
+export { default as lefttwireframe } from "../public/assets/lefttwireframe.svg";
+export { default as rightwireframe } from "../public/assets/rightwireframe.svg";
+export { default as rightyellowstar } from "../public/assets/rightyellowstar.svg";
+export { default as leftbluestart } from "../public/assets/leftbluestart.svg";
+export { default as intelstar } from "../public/assets/intelstar.svg";
+export { default as bluerightframe } from "../public/assets/bluerightframe.svg";
+export { default as yellowsmstart } from "../public/assets/yellowsmstart.svg";
 
 import askaqust from "../public/assets/askaqust.svg";
 import convertformat from "../public/assets/convertformat.svg";

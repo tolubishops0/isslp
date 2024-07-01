@@ -33,7 +33,9 @@ const config: Config = {
         normal: "1.5rem",
       },
       screens: {
-        xs: "350px",
+        xxs: "280px",
+        xs: "350px", //@media (min-width: 380px) { ... }
+        xsm: "400px", //@media (min-width: 380px) { ... }
         sm: "640px", //@media (min-width: 640px) { ... }
         md: "768px", //@media (min-width: 768px) { ... }
         lg: "1024px", //@media (min-width: 1024px) { ... }

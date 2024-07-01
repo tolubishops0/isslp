@@ -46,7 +46,7 @@ export default function Nav() {
   return (
     <header className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[10%] md:w-[8%] z-10">
+        <div className="w-[10%] md:w-[5%] z-30">
           <Image alt="logo-image" src={logo} />
         </div>
 
@@ -84,7 +84,7 @@ export default function Nav() {
         </div>
 
         <div
-          className="z-10 md:hidden transition duration-1000 delay-100 cursor-pointer"
+          className="z-30 md:hidden transition duration-1000 delay-100 cursor-pointer"
           ref={menuButtonRef}
           onClick={toggleMenu}>
           <Image alt="menu-image" src={openMenu ? cancel : menu} />
@@ -94,7 +94,7 @@ export default function Nav() {
           {openMenu && (
             <motion.div
               ref={ref}
-              className="md:hidden fixed top-0 left-0 bg-white w-[60%] min-h-screen"
+              className="md:hidden fixed top-0 left-0 z-20 bg-white w-[60%] min-h-screen"
               {...framerSidebarPanel}>
               <div
                 className={`mt-[8rem] ml-[1.2rem] ${

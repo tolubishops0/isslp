@@ -3,7 +3,7 @@ import Index from "@/components/LandingPage/Index";
 
 export default function Home() {
   return (
-    <div className="h-screen ">
+    <div className="h-scree ">
       <Index />
     </div>
   );
