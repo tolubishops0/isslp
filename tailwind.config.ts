@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { meshbg } from "./lib/utils";
 
 const config: Config = {
   content: [
@@ -14,6 +15,7 @@ const config: Config = {
         darkGray: "#393939",
         mediumGray: "#757575",
         darkBrown: "#473A10",
+        darkBrown2: "#262626",
         lightGray: "#727272",
         veryLightCyan: "#F0FDFA",
         veryDarkBrown: "#1D1806",
@@ -22,6 +24,7 @@ const config: Config = {
         veryDarkGray: "#0A0A0A",
         veryDarkBlueGray: "#090B19",
         darkSlateGray: "#515966",
+        borderDarkColor: "#31280C",
       },
       fontSize: {
         normal: "1rem",
@@ -44,7 +47,8 @@ const config: Config = {
         100: "100ms",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        // meshbg: meshbg,
+        herobg: "rgba(255, 244, 161, 0.1)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },

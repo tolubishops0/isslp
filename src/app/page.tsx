@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Index from "@/components/LandingPage";
+import Index from "@/components/LandingPage/Index";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-blue-500">
+    <div className="h-screen ">
       <Index />
     </div>
   );

@@ -1,4 +1,4 @@
-import { NavLink } from "../types/global";
+import { NavLink, heroFormProps } from "../types/global";
 
 //NAVBAR ASSETS
 
@@ -12,11 +12,11 @@ export const navLinks: NavLink[] = [
     label: "Study tools",
     subMenu: [
       {
-        label: "study with this",
+        label: "with this",
         href: "",
       },
       {
-        label: "study with that",
+        label: "with that",
         href: "",
       },
     ],
@@ -38,4 +38,24 @@ export const navLinks: NavLink[] = [
 
 //HERO SECTION
 export { default as meshbg } from "../public/assets/meshbg.svg";
+export { default as search } from "../public/assets/search item.svg";
+export { default as help } from "../public/assets/help.svg";
 
+import askaqust from "../public/assets/askaqust.svg";
+import convertformat from "../public/assets/convertformat.svg";
+import sumarize from "../public/assets/sumarize.svg";
+
+export const heroForm: heroFormProps[] = [
+  {
+    label: "convert Format",
+    icon: askaqust,
+  },
+  {
+    label: "ask a question",
+    icon: convertformat,
+  },
+  {
+    label: "summarize text",
+    icon: sumarize,
+  },
+];
