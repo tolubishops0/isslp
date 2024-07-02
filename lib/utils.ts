@@ -3,6 +3,7 @@ import {
   heroFormProps,
   hero2SectionProps,
   hero3SectionProps,
+  hero6formProps,
 } from "../types/global";
 
 //NAVBAR ASSETS
@@ -53,6 +54,10 @@ export { default as intelstar } from "../public/assets/intelstar.svg";
 export { default as bluerightframe } from "../public/assets/bluerightframe.svg";
 export { default as yellowsmstart } from "../public/assets/yellowsmstart.svg";
 export { default as pinkblur } from "../public/assets/pinkblur.svg";
+export { default as smilignpe } from "../public/assets/smilignpe.svg";
+export { default as greenstar } from "../public/assets/greenstar.svg";
+export { default as sevenpad } from "../public/assets/sevenpad.svg";
+
 import subjetcstart from "../public/assets/subjetcstart.svg";
 import hero2c from "../public/assets/hero2c.svg";
 import hero2a from "../public/assets/hero2a.svg";
@@ -76,6 +81,10 @@ import sevenpad from "../public/assets/sevenpad.svg";
 import askaqust from "../public/assets/askaqust.svg";
 import convertformat from "../public/assets/convertformat.svg";
 import sumarize from "../public/assets/sumarize.svg";
+
+import trackprogress from "../public/assets/trackprogress.svg";
+import anywhere from "../public/assets/anywhere.svg";
+import exams from "../public/assets/exams.svg";
 
 export const heroForm: heroFormProps[] = [
   {
@@ -203,5 +212,51 @@ export const hero3section: hero3SectionProps[] = [
     text2: "Publisher : Addison Wesley",
     text3: "ISBN : 9780130970695",
     img: sol2,
+  },
+];
+export const hero4sectionPropss: heroFormProps[] = [
+  {
+    label: "Track Your Progress",
+    icon: trackprogress,
+  },
+  {
+    label: "Learn from Anywhere, Anytime",
+    icon: anywhere,
+  },
+  {
+    label: "Ace your exams",
+    icon: exams,
+  },
+];
+export const hero5section: hero6formProps[] = [
+  {
+    title: "GRE",
+    text1: "104K Documents ",
+    text2: " 14K Questions",
+  },
+  {
+    title: "IELTS",
+    text1: "60K Documents ",
+    text2: " 15K Questions",
+  },
+  {
+    title: "JAMB",
+    text1: "34K Documents ",
+    text2: " 4K Questions",
+  },
+  {
+    title: "GRE",
+    text1: "104K Documents ",
+    text2: " 14K Questions",
+  },
+  {
+    title: "WAEC",
+    text1: "14K Questions",
+    text2: "104K Documents",
+  },
+  {
+    title: "NECO",
+    text1: "34K Documents",
+    text2: "4K Questions",
   },
 ];

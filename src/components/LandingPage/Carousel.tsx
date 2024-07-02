@@ -9,7 +9,6 @@ import Image from "next/image";
 import { subjects } from "../../../lib/utils";
 
 export default function Carousel() {
-  console.log(subjects);
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

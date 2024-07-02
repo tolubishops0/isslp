@@ -82,10 +82,31 @@ body {
 }
 
 .solution_img {
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 1rem 1rem 0 0;
 }
 .sol-detail {
-  border: 0px 2px 2px 2px ;
-  border-color: #1D1806
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  border: 2px solid #1d1806;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.unlock_intelligence {
+  background-color: #e765b8;
+  border: 2.27px solid black;
+  border-radius: 20px;
+  height: 27.75rem;
+  box-shadow: -8px 10px 0px 0px #000000;
+}
+
+.past_q {
+  background-color: white;
+  border: 0;
+  box-shadow: 4px 2px 0px 0px #000000;
+  border-radius: 8px;
+  width: 45%;
 }

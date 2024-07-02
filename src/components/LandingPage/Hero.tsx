@@ -194,7 +194,7 @@ export default function Hero() {
           <Image
             src={pinkblur}
             alt="search-icon"
-            className="absolute top-0 right-[-10%] w-[30%]"
+            className="hidden md:flex absolute top-0 right-[-10%] w-[30%]"
           />
         </div>
 

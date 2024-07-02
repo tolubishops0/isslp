@@ -5,7 +5,6 @@ import { hero2Section } from "../../../lib/utils";
 export default function Potential() {
   const iconPositon = (index: number, icon: StaticImageData) => {
     let positionStyles: React.CSSProperties;
-    console.log(index);
 
     switch (index) {
       case 0:
@@ -46,9 +45,7 @@ export default function Potential() {
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-[4rem]">
           {hero2Section.map((item, index) => (
-            <div
-              key={index}
-              className="card-border relative ">
+            <div key={index} className="card-border relative ">
               <div className=" flex flex-col items-start justify-center text-black gap-y-2 px-3 ">
                 <Image src={item.img} alt="image" className="w-full" />
                 <p className="text-left text-[1.285rem] font-semibold">
@@ -63,6 +60,7 @@ export default function Potential() {
           ))}
         </div>
       </div>
+    
     </div>
   );
 }
