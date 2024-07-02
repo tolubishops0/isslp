@@ -14,6 +14,7 @@ export interface NavLinkProps {
   label: string;
 }
 
+
 export interface heroFormProps {
   label: string;
   icon: StaticImageData;

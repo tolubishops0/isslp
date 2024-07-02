@@ -36,7 +36,6 @@ export default function Nav() {
   };
 
   const handleMenuSelection = (index: number, item: string) => {
-    console.log(item);
     setOpenMenu(false);
     const updatedSubMenus = [...openSubMenu];
     updatedSubMenus[index] = false;
@@ -46,7 +45,7 @@ export default function Nav() {
   return (
     <header className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[10%] md:w-[4%] z-30">
+        <div className="w-[4.625rem] md:w-[3.5rem] z-30">
           <Image alt="logo-image" src={logo} />
         </div>
 
@@ -55,19 +54,19 @@ export default function Nav() {
             <div key={index} className="relative ">
               <div
                 onClick={() => toggleSubMenu(index)}
-                className="cursor-pointer flex items-center gap-x-3 font-bold text-normal leading-normal text-primary">
+                className="cursor-pointer flex items-center gap-x-2 font-bold text-normal leading-normal text-primary">
                 {item.label}
                 <Image alt="arr-image" src={arrowndown} />
               </div>
-              <div className="absolute left-0 top-full w-full">
+              <div className="z-50 absolute left-0 top-full w-full ">
                 {openSubMenu[index] && (
                   <motion.div
                     {...framerSidebarBackground}
-                    className="flex flex-col gap-y-4 pt-[2.5rem] pb-[1rem] pl-[1rem] bg-white rounded-lg">
+                    className="flex flex-col gap-y-4 pt-[2.5rem] pb-[1rem] pl-[1rem] bg-white rounded-lg z-50">
                     {item.subMenu.map((menu, subIndex) => (
                       <p
                         onClick={() => handleMenuSelection(index, item.label)}
-                        className="cursor-pointer text-primary font-semibold leading-[1.375] hover:text-slate-900"
+                        className="cursor-pointer capitalize text-primary font-semibold leading-[1.375] hover:text-slate-900"
                         key={subIndex}>
                         {menu.label}
                       </p>

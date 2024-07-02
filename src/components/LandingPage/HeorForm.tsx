@@ -18,13 +18,13 @@ export default function HeorForm() {
             <div className="border-coolGray border flex justify-between px-3 h-[3rem]">
               <input
                 type="email"
-                placeholder="Search for textbooks for index 0"
+                placeholder="Convert you pdf here"
                 className="border-0 focus:outline-0 w-full placeholder:text-[0.9rem] placeholder:font-normal placeholder:leading-[1.22] placeholder:text-mediumGray placeholder:font-sans"
               />
               <Image src={search} alt="search-icon" />
             </div>
-            <div className="font-normal text-lightGray text-[0.875rem] leading-[1] flex gap-x-1 items-center">
-              <p>Try typing in a book title or ISBN</p>
+            <div className="font-normal text-lightGray text-[0.6rem] md:text-[0.875rem] leading-[1] flex gap-x-1 items-center">
+              <p className="">Try typing in a book title or ISBN</p>
               <Image
                 src={help}
                 alt="help-icon"
@@ -44,7 +44,7 @@ export default function HeorForm() {
               />
               <Image src={search} alt="search-icon" />
             </div>
-            <div className="font-normal text-lightGray text-[0.875rem] leading-[1] flex gap-x-1 items-center">
+            <div className="font-normal text-lightGray text-[0.6rem] md:text-[0.875rem] leading-[1] flex gap-x-1 items-center">
               <p>Try typing in a book title or ISBN</p>
               <Image
                 src={help}
@@ -60,12 +60,12 @@ export default function HeorForm() {
             <div className="border-coolGray border flex justify-between px-3 h-[3rem]">
               <input
                 type="email"
-                placeholder="Search for textbooks for index 2"
-                className="border-0 focus:outline-0 w-full placeholder:text-[0.9rem] placeholder:font-normal placeholder:leading-[1.22] placeholder:text-mediumGray placeholder:font-sans"
+                placeholder="Summarize your texts here"
+                className="border-0 focus:outline-0 w-full placeholder:text-[0.6rem] md:placeholder:text-[0.9rem] placeholder:font-normal placeholder:leading-[1.22] placeholder:text-mediumGray placeholder:font-sans"
               />
               <Image src={search} alt="search-icon" />
             </div>
-            <div className="font-normal text-lightGray text-[0.875rem] leading-[1] flex gap-x-1 items-center">
+            <div className="font-normal text-lightGray text-[0.6rem] md:text-[0.875rem] leading-[1] flex gap-x-1 items-center">
               <p>Try typing in a book title or ISBN</p>
               <Image
                 src={help}
@@ -81,14 +81,7 @@ export default function HeorForm() {
   };
   return (
     <div>
-      <div
-        style={{
-          // borderWidth: "2px 0 2px 0",
-          borderColor: "#31280C",
-          borderRadius: "0px 0px 12px 12px",
-          boxShadow: "-7px 10px 5px 0px rgba(0,0,0,1)",
-        }}
-        className="w-full md:w-full xl:w-[70%] h-[14.625rem] mx-auto flex flex-col justify-center bg-white">
+      <div className="hero-form w-full md:w-full xl:w-[70%] h-[14.625rem] mx-auto flex flex-col justify-center bg-white">
         <div className="flex md:w-auto h-[5rem]">
           {heroForm.map((item, index) => (
             <div
@@ -105,7 +98,7 @@ export default function HeorForm() {
               } rounded-t-[12px]`}>
               <div className="flex flex-col items-center justify-center md:flex-row md:gap-x-3 py-4">
                 <Image alt="askaqust-icon" src={item.icon} />
-                <span className="text-center uppercase text-[0.6rem] md:text-[1.125rem] text-darkBrown font-bold">
+                <span className="mt-2 md:mt-0 text-center uppercase text-[0.5rem] md:text-[1.125rem] text-darkBrown font-bold">
                   {item.label}
                 </span>
               </div>

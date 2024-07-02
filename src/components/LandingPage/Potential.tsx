@@ -39,7 +39,7 @@ export default function Potential() {
   return (
     <div className="bg-[rgba(255,227,245,0.7)]">
       <div className="w-[90%] py-[3rem] mx-auto flex flex-col gap-y-[3rem]">
-        <h1 className="font-semibold text-2xl xl:text-[2rem] text-veryDarkBrown xl:leading-[2.1] text-center">
+        <h1 className="font-semibold text-2xl md:text-3xl xl:text-[2rem] text-veryDarkBrown xl:leading-[2.1] text-center">
           Unlock Your Potential with Intelligent Scholar
         </h1>
 
@@ -48,7 +48,7 @@ export default function Potential() {
             <div key={index} className="card-border relative ">
               <div className=" flex flex-col items-start justify-center text-black gap-y-2 px-3 ">
                 <Image src={item.img} alt="image" className="w-full" />
-                <p className="text-left text-[1.285rem] font-semibold">
+                <p className="text-left text-[1.1rem] 2xl:text-[1.285rem] font-semibold mt-2">
                   {item.title}
                 </p>
                 <p className="text-left text-normal font-normal leading-[1.301875] ">
@@ -60,7 +60,6 @@ export default function Potential() {
           ))}
         </div>
       </div>
-    
     </div>
   );
 }

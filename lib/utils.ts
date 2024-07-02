@@ -12,6 +12,8 @@ export { default as menu } from "../public/assets/icons8-menu-24.png";
 export { default as cancel } from "../public/assets/icons8-cancel-30.png";
 export { default as logo } from "../public/assets/logo.svg";
 export { default as arrowndown } from "../public/assets/arrowndown.svg";
+export { default as stressedguy } from "../public/assets/stressedguy.svg";
+export { default as play } from "../public/assets/play.svg";
 
 export const navLinks: NavLink[] = [
   {
@@ -57,6 +59,12 @@ export { default as pinkblur } from "../public/assets/pinkblur.svg";
 export { default as smilignpe } from "../public/assets/smilignpe.svg";
 export { default as greenstar } from "../public/assets/greenstar.svg";
 export { default as sevenpad } from "../public/assets/sevenpad.svg";
+export { default as goldstart } from "../public/assets/goldstart.svg";
+
+import fbicn from "../public/assets/fbicn.svg";
+import xicn from "../public/assets/xicn.svg";
+import igicn from "../public/assets/igicn.svg";
+import linkicn from "../public/assets/linkicn.svg";
 
 import subjetcstart from "../public/assets/subjetcstart.svg";
 import hero2c from "../public/assets/hero2c.svg";
@@ -85,6 +93,7 @@ import sumarize from "../public/assets/sumarize.svg";
 import trackprogress from "../public/assets/trackprogress.svg";
 import anywhere from "../public/assets/anywhere.svg";
 import exams from "../public/assets/exams.svg";
+import { link } from "fs";
 
 export const heroForm: heroFormProps[] = [
   {
@@ -148,7 +157,7 @@ export const hero2Section: hero2SectionProps[] = [
   {
     title: "Record Lecture/Meeting",
     text: "Effortlessly capture and summarize long lectures, saving time by providing concise key concept summaries for easy understanding and retention.",
-    img: hero2a,
+    img: hero2f,
     icon: firstpad,
   },
   {
@@ -171,12 +180,12 @@ export const hero2Section: hero2SectionProps[] = [
   {
     title: "Listen on the Go",
     text: "Convert your notes to audio summaries and listen while you commute or multitask. Study efficiently anywhere, anytime.",
-    img: hero2e,
+    img: hero2a,
   },
   {
     title: "Advanced Research",
     text: "Utilize our AI-powered tools for in-depth research and analysis. Access comprehensive insights and data to support your academic and professional projects.",
-    img: hero2f,
+    img: hero2e,
     icon: sixthpad,
   },
   {
@@ -258,5 +267,24 @@ export const hero5section: hero6formProps[] = [
     title: "NECO",
     text1: "34K Documents",
     text2: "4K Questions",
+  },
+];
+
+export const socialIcon: heroFormProps[] = [
+  {
+    label: "facebook",
+    icon: fbicn
+  },
+  {
+    label: "facebook",
+    icon: igicn,
+  },
+  {
+    label: "facebook",
+    icon: linkicn
+  },
+  {
+    label: "facebook",
+    icon: xicn
   },
 ];

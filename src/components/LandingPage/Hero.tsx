@@ -153,7 +153,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute top-[-38%] right-[9%]  h-auto "
+            className="absolute top-[-20%] right-[10%]  h-auto "
             animate={{
               scale: [0.8, 1.1, 1],
               opacity: [1, 0.9, 1],
@@ -171,18 +171,6 @@ export default function Hero() {
               className="h-auto w-[2.5rem]"
             />
           </motion.div>
-
-          <Image
-            src={lefttwireframe}
-            alt="search-icon"
-            className="hidden xl:block absolute top-[-3.5%] left-[-16%] w-[21%] 2xl:w-[15%] 2xl:right-[-10%] 2xl:top-[0] h-auto "
-          />
-
-          <Image
-            src={rightwireframe}
-            alt="search-icon"
-            className="hidden xl:block absolute bottom-[-10%] right-[-13%] w-[16%] 2xl:w-[12%] 2xl:right-[-10%] 2xl:top-[0]"
-          />
         </div>
         <div className="relative w-full xl:w-[92%]  mt-10 z-10">
           <HeorForm />
@@ -194,7 +182,17 @@ export default function Hero() {
           <Image
             src={pinkblur}
             alt="search-icon"
-            className="hidden md:flex absolute top-0 right-[-10%] w-[30%]"
+            className="hidden xl:flex absolute top-0 right-[-10%] w-[30%]"
+          />
+          <Image
+            src={lefttwireframe}
+            alt="search-icon"
+            className="hidden xl:block absolute bottom-[50%] left-[0%] w-[16%] 2xl:w-[15%] h-auto "
+          />
+          <Image
+            src={rightwireframe}
+            alt="search-icon"
+            className="hidden xl:block absolute bottom-[110%] right-[2%] w-[13%] 2xl:w-[12%] "
           />
         </div>
 

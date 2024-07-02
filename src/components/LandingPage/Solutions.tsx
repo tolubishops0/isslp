@@ -24,7 +24,7 @@ export default function Solutions() {
           </div>
           <div className="flex items-center flex-wrap justify-center gap-y-[4rem] gap-x-10">
             {hero3section.map((item, index) => (
-              <div key={index} className="w-[90%] xl:w-[25%] ">
+              <div key={index} className="w-[100%] xl:w-[25%] ">
                 <Image
                   src={item.img}
                   alt="image"
@@ -83,8 +83,8 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div className="absolute bottom-[-2%] right-[-12%]">
-            <Image src={smilignpe} alt="image" className="w-[90%]" />
+          <div className="absolute bottom-0 right-[-2px]">
+            <Image src={smilignpe} alt="image" className="" />
           </div>
           <Image
             src={greenstar}
@@ -94,7 +94,7 @@ export default function Solutions() {
           <Image
             src={sevenpad}
             alt="image"
-            className="absolute top-[-6%] right-[-5%]"
+            className="absolute top-[-9%] right-[-4%]"
           />
         </div>
       </div>
