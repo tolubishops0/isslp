@@ -46,7 +46,7 @@ export default function Nav() {
   return (
     <header className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[10%] md:w-[5%] z-30">
+        <div className="w-[10%] md:w-[4%] z-30">
           <Image alt="logo-image" src={logo} />
         </div>
 

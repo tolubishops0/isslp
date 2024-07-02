@@ -54,6 +54,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        infinite_scroll: {
+          "100%": { transform: "translate(-100%)" },
+        },
+      },
+      animation: {
+        infinite_scroll: "infinite_scroll 15s linear infinite",
+      },
     },
   },
   plugins: [],
