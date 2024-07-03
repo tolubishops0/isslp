@@ -25,9 +25,8 @@ export default function Footer() {
         <div className="flex gap-x-3">
           {socialIcon.map((item, index) => (
             <Image
-             
               key={index}
-              src={item}
+              src={item.icon}
               alt="logo"
               className="hover:scale-110 transition-all cursor-pointer"
             />

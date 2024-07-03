@@ -36,7 +36,7 @@ export default function HeorForm() {
       case 1:
         return (
           <div className="flex flex-col gap-y-6">
-            <div className="border-coolGray border flex justify-between px-3 h-[3rem]">
+            <div className="border-coolGray border flex justify-between px-3 h-[3rem] transition-all">
               <input
                 type="email"
                 placeholder="Search for textbooks, step-by-step explanations to homework questions, and more..."
@@ -113,7 +113,7 @@ export default function HeorForm() {
             borderRadius: "0px 0px 12px 12px ",
           }}
           className="h-[9.625rem] flex items-center">
-          <div className="w-[90%] mx-auto"> {renderForm()}</div>
+          <div className="w-[90%] mx-auto "> {renderForm()}</div>
         </div>
       </div>
     </div>

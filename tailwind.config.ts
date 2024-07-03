@@ -34,13 +34,13 @@ const config: Config = {
       },
       screens: {
         xxs: "280px",
-        xs: "350px", //@media (min-width: 380px) { ... }
-        xsm: "400px", //@media (min-width: 380px) { ... }
-        sm: "640px", //@media (min-width: 640px) { ... }
-        md: "768px", //@media (min-width: 768px) { ... }
-        lg: "1024px", //@media (min-width: 1024px) { ... }
-        xl: "1280px", //@media (min-width: 1280px) { ... }
-        "2xl": "1536px", //@media (min-width: 1536px) { ... }
+        xs: "350px", 
+        xsm: "400px", 
+        sm: "640px", 
+        md: "768px", 
+        lg: "1024px", 
+        xl: "1280px", 
+        "2xl": "1536px",
       },
       transitionDuration: {
         200: "200ms",
@@ -48,15 +48,10 @@ const config: Config = {
       transitionDelay: {
         100: "100ms",
       },
-      backgroundImage: {
-        // meshbg: meshbg,
-        herobg: "rgba(255, 244, 161, 0.1)",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+     
       keyframes: {
         infinite_scroll: {
-          "100%": { transform: "translate(-100%)" },
+          "100%": { transform: "translate(calc(-50% + 5rem))" },
         },
       },
       animation: {

@@ -93,7 +93,6 @@ import sumarize from "../public/assets/sumarize.svg";
 import trackprogress from "../public/assets/trackprogress.svg";
 import anywhere from "../public/assets/anywhere.svg";
 import exams from "../public/assets/exams.svg";
-import { link } from "fs";
 
 export const heroForm: heroFormProps[] = [
   {
@@ -111,6 +110,47 @@ export const heroForm: heroFormProps[] = [
 ];
 
 export const subjects: heroFormProps[] = [
+  {
+    label: "Math",
+    icon: subjetcstart,
+  },
+  {
+    label: "Science",
+    icon: subjetcstart,
+  },
+  {
+    label: "History",
+    icon: subjetcstart,
+  },
+  {
+    label: "Geography",
+    icon: subjetcstart,
+  },
+  {
+    label: "English",
+    icon: subjetcstart,
+  },
+  {
+    label: "Art",
+    icon: subjetcstart,
+  },
+  {
+    label: "Music",
+    icon: subjetcstart,
+  },
+  {
+    label: "English",
+    icon: subjetcstart,
+  },
+  {
+    label: "Art",
+    icon: subjetcstart,
+  },
+  {
+    label: "Music",
+    icon: subjetcstart,
+  },
+
   {
     label: "Math",
     icon: subjetcstart,

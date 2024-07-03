@@ -10,8 +10,8 @@ export default function Index() {
     <div>
       <Hero />
       <Potential />
-      {/* <Solutions /> */}
-      <VideoSection/>
+      <VideoSection />
+      <Solutions />
       <PastQuestion />
     </div>
   );

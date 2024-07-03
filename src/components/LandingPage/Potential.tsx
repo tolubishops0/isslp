@@ -45,7 +45,9 @@ export default function Potential() {
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-[4rem]">
           {hero2Section.map((item, index) => (
-            <div key={index} className="card-border relative ">
+            <div
+              key={index}
+              className="card-border relative hover:bg-[#FAFEFD] transition-all">
               <div className=" flex flex-col items-start justify-center text-black gap-y-2 px-3 ">
                 <Image src={item.img} alt="image" className="w-full" />
                 <p className="text-left text-[1.1rem] 2xl:text-[1.285rem] font-semibold mt-2">

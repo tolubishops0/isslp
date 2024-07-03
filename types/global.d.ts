@@ -1,5 +1,10 @@
 import { StaticImageData } from "next/image";
 
+declare module "@splidejs/react-splide" {
+  export { Options } from "@splidejs/splide";
+  export { Splide, SplideSlide } from "@splidejs/react-splide";
+}
+
 export interface NavLink {
   label: string;
   subMenu: SubMenuItem[];

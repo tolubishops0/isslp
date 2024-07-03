@@ -78,7 +78,7 @@ export default function Nav() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:bg-slate-900">
+        <div className=" cursor-pointer hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-110 transition-all">
           <button>Sign up</button>
         </div>
 
