@@ -60,6 +60,7 @@ export { default as smilignpe } from "../public/assets/smilignpe.svg";
 export { default as greenstar } from "../public/assets/greenstar.svg";
 export { default as sevenpad } from "../public/assets/sevenpad.svg";
 export { default as goldstart } from "../public/assets/goldstart.svg";
+export { default as chatbubble } from "../public/assets/chatbubble.svg";
 
 import fbicn from "../public/assets/fbicn.svg";
 import xicn from "../public/assets/xicn.svg";
@@ -96,15 +97,15 @@ import exams from "../public/assets/exams.svg";
 
 export const heroForm: heroFormProps[] = [
   {
-    label: "convert Format",
+    label: "UPLOAD YOUR NOTES",
     icon: askaqust,
   },
   {
-    label: "ask a question",
+    label: "RECORD YOUR CLASS",
     icon: convertformat,
   },
   {
-    label: "summarize text",
+    label: "Convert Formart",
     icon: sumarize,
   },
 ];

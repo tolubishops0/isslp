@@ -11,6 +11,7 @@ import {
   bluerightframe,
   yellowsmstart,
   pinkblur,
+  chatbubble,
 } from "../../../lib/utils";
 import Carousel from "./Carousel";
 import HeorForm from "./HeorForm";
@@ -79,7 +80,7 @@ export default function Hero() {
             />
           </motion.div>
         </div>
-        <div className="relative w-full xl:w-[92%]  mt-10 z-10">
+        <div className="relative w-full xl:w-[92%] mt-10 z-10">
           <HeorForm />
           <Image
             src={bluerightframe}
@@ -91,16 +92,24 @@ export default function Hero() {
             alt="search-icon"
             className="hidden xl:flex absolute top-0 right-[-10%] w-[30%]"
           />
+
           <Image
             src={lefttwireframe}
             alt="search-icon"
-            className="hidden xl:block absolute bottom-[50%] left-[0%] w-[16%] 2xl:w-[15%] h-auto "
+            className="hidden xl:block absolute bottom-[50%] left-[0%] w-[16%] 2xl:w-[12%] h-auto"
           />
           <Image
             src={rightwireframe}
             alt="search-icon"
-            className="hidden xl:block absolute bottom-[110%] right-[2%] w-[13%] 2xl:w-[12%] "
+            className="hidden xl:block absolute bottom-[110%] right-[2%] w-[13%] 2xl:w-[12%] 2xl:bottom-[40%] "
           />
+
+          <div className="chat-bubble fixed bottom-[13%] right-0 xl:absolute xl:bottom-[-55%] xl:right-[-8%] cursor-pointer active:scale-105 hover:scale-95 transition-all">
+            <Image src={chatbubble} alt="search-icon" />
+            <span className="font-semibold text-sm md:text-normal text-white md:leading-relaxed">
+              Chat with the smartest bot
+            </span>
+          </div>
         </div>
 
         <div className="z-0 absolute top-[0] xl:top-[-13%] left-1/2 transform -translate-x-1/2 -translae-y-1/2 h-auto">

@@ -96,9 +96,9 @@ export default function HeorForm() {
                   ? "border-t-2 border-r-[1px] border-b-0 border-l-[1px]"
                   : "border-t-2 border-r-2 border-b-0 border-l-[1px]"
               } rounded-t-[12px]`}>
-              <div className="flex flex-col items-center justify-center md:flex-row md:gap-x-3 py-4">
-                <Image alt="askaqust-icon" src={item.icon} />
-                <span className="mt-2 md:mt-0 text-center uppercase text-[0.5rem] md:text-[1.125rem] text-darkBrown font-bold">
+              <div className="flex flex-col items-center justify-center md:flex-row md:gap-x-1 py-4">
+                <Image alt="askaqust-icon" src={item.icon} className="w-[1.5rem]"/>
+                <span className="mt-2 md:mt-0 text-center uppercase text-[0.5rem] md:text-[1rem]  text-darkBrown font-bold">
                   {item.label}
                 </span>
               </div>
@@ -113,7 +113,7 @@ export default function HeorForm() {
             borderRadius: "0px 0px 12px 12px ",
           }}
           className="h-[9.625rem] flex items-center">
-          <div className="w-[90%] mx-auto "> {renderForm()}</div>
+          <div className="w-full px-[1.5rem] mx-auto "> {renderForm()}</div>
         </div>
       </div>
     </div>
