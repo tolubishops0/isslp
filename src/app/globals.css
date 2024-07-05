@@ -2,32 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.hero-form {
+  box-shadow: -6px 8px 0px 0px #000000;
+  border-color: #31280c;
+  border-radius: 12px 0px 12px 12px;
 }
+.chat-bubble {
+  box-shadow: -4px 4px 0px 0px #000000;
+  background-color: #c8ae67;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.8rem;
+  width: 13.4825rem;
+  padding: 0 1rem;
+  height: 5.189375rem;
+  @media (max-width: 640px) {
+    height: 4rem;
+    width: 12rem;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card-border {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 27.5rem;
+  row-gap: 0.5rem;
+  width: 22%;
+  padding-top: 0.6rem;
+  border-color: #000000;
+  background-color: white;
+  border-radius: 38.21px;
+  border-width: 4.78px;
+  box-shadow: 1.59px 1.59px 0px 0px #000000;
+  box-shadow: 3.18px 3.18px 0px 0px #000000;
+
+  @media (max-width: 1200px) {
+    width: 45%;
+    height: 32rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 45%;
+    height: 30rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 95%;
+    height: 38.5rem;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
+    height: 30.5rem;
+  }
+  @media (max-width: 400px) {
+    width: 95%;
+    height: 27.5rem;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.solution_img {
+  border: 1px solid transparent;
+  border-radius: 1rem 1rem 0 0;
+}
+.sol-detail {
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  border: 2px solid #1d1806;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.unlock_intelligence {
+  background-color: #e765b8;
+  border: 2.27px solid black;
+  border-radius: 20px;
+  height: 27.75rem;
+  box-shadow: -8px 10px 0px 0px #000000;
+}
+
+.past_q {
+  background-color: #fefdfb;
+  border: 0;
+  box-shadow: 4px 2px 0px 0px #000000;
+  border-radius: 8px;
+  width: 30%;
+  height: 5.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  row-gap: 0.3rem;
+  @media (max-width: 1024px) {
+    width: 45%;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
   }
 }
