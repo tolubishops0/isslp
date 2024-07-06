@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { stressedguy, play } from "../../../lib/utils";
+import { stressedguy, play } from "../../lib/utils";
 
 export default function VideoSection() {
   return (

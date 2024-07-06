@@ -12,7 +12,7 @@ import {
   yellowsmstart,
   pinkblur,
   chatbubble,
-} from "../../../lib/utils";
+} from "../../lib/utils";
 import Carousel from "./Carousel";
 import HeorForm from "./HeorForm";
 
@@ -105,8 +105,8 @@ export default function Hero() {
           />
 
           <div className="chat-bubble fixed bottom-[13%] right-0 xl:absolute xl:bottom-[-55%] xl:right-[-8%] cursor-pointer active:scale-105 hover:scale-95 transition-all">
-            <Image src={chatbubble} alt="search-icon" />
-            <span className="font-semibold text-sm md:text-normal text-white md:leading-relaxed">
+            <Image src={chatbubble} alt="search-icon"  />
+            <span className="font-semibold text-xs md:text-normal text-white md:leading-relaxed">
               Chat with the smartest bot
             </span>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { logo, socialIcon } from "../../../lib/utils";
+import { logo, socialIcon } from "../../lib/utils";
 
 export default function Footer() {
   return (

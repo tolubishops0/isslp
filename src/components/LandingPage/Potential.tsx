@@ -1,6 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { hero2Section } from "../../../lib/utils";
+import { hero2Section } from "../../lib/utils";
 
 export default function Potential() {
   const iconPositon = (index: number, icon: StaticImageData) => {

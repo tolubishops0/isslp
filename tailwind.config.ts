@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { meshbg } from "./lib/utils";
 
 const config: Config = {
   content: [
@@ -26,36 +25,16 @@ const config: Config = {
         darkSlateGray: "#515966",
         borderDarkColor: "#31280C",
       },
-      fontSize: {
-        normal: "1rem",
-      },
-      lineHeight: {
-        normal: "1.5rem",
-      },
+
       screens: {
         xxs: "280px",
-        xs: "350px", 
-        xsm: "400px", 
-        sm: "640px", 
-        md: "768px", 
-        lg: "1024px", 
-        xl: "1280px", 
+        xs: "350px",
+        xsm: "400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1536px",
-      },
-      transitionDuration: {
-        200: "200ms",
-      },
-      transitionDelay: {
-        100: "100ms",
-      },
-     
-      keyframes: {
-        infinite_scroll: {
-          "100%": { transform: "translate(calc(-50% + 5rem))" },
-        },
-      },
-      animation: {
-        infinite_scroll: "infinite_scroll 15s linear infinite",
       },
     },
   },

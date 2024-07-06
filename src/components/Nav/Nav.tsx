@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { logo, menu, cancel, navLinks, arrowndown } from "../../../lib/utils";
+import { logo, menu, cancel, navLinks, arrowndown } from "../../lib/utils";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAway } from "react-use";
@@ -43,7 +43,7 @@ export default function Nav() {
   };
 
   return (
-    <header className="w-[90%] mx-auto">
+    <nav className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
         <div className="w-[3rem] md:w-[3.5rem] z-30">
           <Image alt="logo-image" src={logo} />
@@ -132,7 +132,7 @@ export default function Nav() {
           )}
         </AnimatePresence>
       </div>
-    </header>
+    </nav>
   );
 }
 

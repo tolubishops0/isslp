@@ -4,16 +4,16 @@ import {
   hero2SectionProps,
   hero3SectionProps,
   hero6formProps,
-} from "../types/global";
+} from "../../types/global";
 
 //NAVBAR ASSETS
 
-export { default as menu } from "../public/assets/icons8-menu-24.png";
-export { default as cancel } from "../public/assets/icons8-cancel-30.png";
-export { default as logo } from "../public/assets/logo.svg";
-export { default as arrowndown } from "../public/assets/arrowndown.svg";
-export { default as stressedguy } from "../public/assets/stressedguy.svg";
-export { default as play } from "../public/assets/play.svg";
+export { default as menu } from "../..//public/assets/icons8-menu-24.png";
+export { default as cancel } from "../../public/assets/icons8-cancel-30.png";
+export { default as logo } from "../../public/assets/logo.svg";
+export { default as arrowndown } from "../../public/assets/arrowndown.svg";
+export { default as stressedguy } from "../../public/assets/stressedguy.svg";
+export { default as play } from "../../public/assets/play.svg";
 
 export const navLinks: NavLink[] = [
   {
@@ -45,55 +45,55 @@ export const navLinks: NavLink[] = [
 ];
 
 //HERO SECTION
-export { default as meshbg } from "../public/assets/meshbg.svg";
-export { default as search } from "../public/assets/search item.svg";
-export { default as help } from "../public/assets/help.svg";
-export { default as lefttwireframe } from "../public/assets/lefttwireframe.svg";
-export { default as rightwireframe } from "../public/assets/rightwireframe.svg";
-export { default as rightyellowstar } from "../public/assets/rightyellowstar.svg";
-export { default as leftbluestart } from "../public/assets/leftbluestart.svg";
-export { default as intelstar } from "../public/assets/intelstar.svg";
-export { default as bluerightframe } from "../public/assets/bluerightframe.svg";
-export { default as yellowsmstart } from "../public/assets/yellowsmstart.svg";
-export { default as pinkblur } from "../public/assets/pinkblur.svg";
-export { default as smilignpe } from "../public/assets/smilignpe.svg";
-export { default as greenstar } from "../public/assets/greenstar.svg";
-export { default as sevenpad } from "../public/assets/sevenpad.svg";
-export { default as goldstart } from "../public/assets/goldstart.svg";
-export { default as chatbubble } from "../public/assets/chatbubble.svg";
+export { default as meshbg } from "../../public/assets/meshbg.svg";
+export { default as search } from "../../public/assets/search item.svg";
+export { default as help } from "../../public/assets/help.svg";
+export { default as lefttwireframe } from "../../public/assets/lefttwireframe.svg";
+export { default as rightwireframe } from "../../public/assets/rightwireframe.svg";
+export { default as rightyellowstar } from "../../public/assets/rightyellowstar.svg";
+export { default as leftbluestart } from "../../public/assets/leftbluestart.svg";
+export { default as intelstar } from "../../public/assets/intelstar.svg";
+export { default as bluerightframe } from "../../public/assets/bluerightframe.svg";
+export { default as yellowsmstart } from "../../public/assets/yellowsmstart.svg";
+export { default as pinkblur } from "../../public/assets/pinkblur.svg";
+export { default as smilignpe } from "../../public/assets/smilignpe.svg";
+export { default as greenstar } from "../../public/assets/greenstar.svg";
+export { default as sevenpad } from "../../public/assets/sevenpad.svg";
+export { default as goldstart } from "../../public/assets/goldstart.svg";
+export { default as chatbubble } from "../../public/assets/chatbubble.svg";
 
-import fbicn from "../public/assets/fbicn.svg";
-import xicn from "../public/assets/xicn.svg";
-import igicn from "../public/assets/igicn.svg";
-import linkicn from "../public/assets/linkicn.svg";
+import fbicn from "../../public/assets/fbicn.svg";
+import xicn from "../../public/assets/xicn.svg";
+import igicn from "../../public/assets/igicn.svg";
+import linkicn from "../../public/assets/linkicn.svg";
 
-import subjetcstart from "../public/assets/subjetcstart.svg";
-import hero2c from "../public/assets/hero2c.svg";
-import hero2a from "../public/assets/hero2a.svg";
-import hero2b from "../public/assets/hero2b.svg";
-import hero2d from "../public/assets/hero2d.svg";
-import hero2e from "../public/assets/hero2e.svg";
-import hero2f from "../public/assets/hero2f.svg";
-import hero2g from "../public/assets/hero2g.svg";
-import hero2h from "../public/assets/hero2h.svg";
+import subjetcstart from "../../public/assets/subjetcstart.svg";
+import hero2c from "../../public/assets/hero2c.svg";
+import hero2a from "../../public/assets/hero2a.svg";
+import hero2b from "../../public/assets/hero2b.svg";
+import hero2d from "../../public/assets/hero2d.svg";
+import hero2e from "../../public/assets/hero2e.svg";
+import hero2f from "../../public/assets/hero2f.svg";
+import hero2g from "../../public/assets/hero2g.svg";
+import hero2h from "../../public/assets/hero2h.svg";
 
-import sol1 from "../public/assets/sol1.svg";
-import sol2 from "../public/assets/sol2.svg";
-import sol3 from "../public/assets/sol3.svg";
+import sol1 from "../../public/assets/sol1.svg";
+import sol2 from "../../public/assets/sol2.svg";
+import sol3 from "../../public/assets/sol3.svg";
 
-import firstpad from "../public/assets/firstpad.svg";
-import secpad from "../public/assets/secpad.svg";
-import thirdpad from "../public/assets/thirdpad.svg";
-import sixthpad from "../public/assets/sixthpad.svg";
-import sevenpad from "../public/assets/sevenpad.svg";
+import firstpad from "../../public/assets/firstpad.svg";
+import secpad from "../../public/assets/secpad.svg";
+import thirdpad from "../../public/assets/thirdpad.svg";
+import sixthpad from "../../public/assets/sixthpad.svg";
+import sevenpad from "../../public/assets/sevenpad.svg";
 
-import askaqust from "../public/assets/askaqust.svg";
-import convertformat from "../public/assets/convertformat.svg";
-import sumarize from "../public/assets/sumarize.svg";
+import askaqust from "../../public/assets/askaqust.svg";
+import convertformat from "../../public/assets/convertformat.svg";
+import sumarize from "../../public/assets/sumarize.svg";
 
-import trackprogress from "../public/assets/trackprogress.svg";
-import anywhere from "../public/assets/anywhere.svg";
-import exams from "../public/assets/exams.svg";
+import trackprogress from "../../public/assets/trackprogress.svg";
+import anywhere from "../../public/assets/anywhere.svg";
+import exams from "../../public/assets/exams.svg";
 
 export const heroForm: heroFormProps[] = [
   {
@@ -314,7 +314,7 @@ export const hero5section: hero6formProps[] = [
 export const socialIcon: heroFormProps[] = [
   {
     label: "facebook",
-    icon: fbicn
+    icon: fbicn,
   },
   {
     label: "facebook",
@@ -322,10 +322,10 @@ export const socialIcon: heroFormProps[] = [
   },
   {
     label: "facebook",
-    icon: linkicn
+    icon: linkicn,
   },
   {
     label: "facebook",
-    icon: xicn
+    icon: xicn,
   },
 ];
