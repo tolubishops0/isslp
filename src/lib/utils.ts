@@ -124,10 +124,6 @@ export const subjects: heroFormProps[] = [
     icon: subjetcstart,
   },
   {
-    label: "Geography",
-    icon: subjetcstart,
-  },
-  {
     label: "English",
     icon: subjetcstart,
   },
@@ -162,10 +158,6 @@ export const subjects: heroFormProps[] = [
   },
   {
     label: "History",
-    icon: subjetcstart,
-  },
-  {
-    label: "Geography",
     icon: subjetcstart,
   },
   {
