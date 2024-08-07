@@ -7,6 +7,8 @@ import { passclose, passopen } from "@/lib/utils";
 import Image from "next/image";
 
 const StyledInputContainer = styled.div`
+`;
+const StyledInputField = styled.div`
   position: relative;
 `;
 
@@ -36,7 +38,7 @@ const StyledLabel = styled.p`
 const StyledToggleButton = styled.span`
   position: absolute;
   right: 1rem;
-  top: 65%;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -67,19 +69,21 @@ export default function Input({
   return (
     <StyledInputContainer>
       <StyledLabel>{label}</StyledLabel>
-      <StyledInput
-        placeholder={placeholder}
-        type={isPasswordVisible ? "text" : type}
-        {...register(fieldname)}
-      />
-      {type === "password" && (
-        <StyledToggleButton onClick={togglePasswordVisibility}>
-          <Image
-            src={isPasswordVisible ? passopen : passclose}
-            alt="password-icon"
-          />
-        </StyledToggleButton>
-      )}
+      <StyledInputField>
+        <StyledInput
+          placeholder={placeholder}
+          type={isPasswordVisible ? "text" : type}
+          {...register(fieldname)}
+        />
+        {type === "password" && (
+          <StyledToggleButton onClick={togglePasswordVisibility}>
+            <Image
+              src={isPasswordVisible ? passopen : passclose}
+              alt="password-icon"
+            />
+          </StyledToggleButton>
+        )}
+      </StyledInputField>
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </StyledInputContainer>
   );

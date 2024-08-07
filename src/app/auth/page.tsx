@@ -65,13 +65,13 @@ export default function AuthPage() {
     );
   };
 
-  if (!authType || isLoading) {
+  if (!authType) {
     return <Loader />;
   }
 
   return (
     <>
-      {/* {isLoading && <Loader />} */}
+      {isLoading && <Loader />}
       <div className="w-full h-full lg:w-[80%] mx-auto flex flex-col gap-y-[2rem] pt-[2rem]">
         <div className="flex gap-x-6 justify-start items-center">
           <Link href="/auth?type=signup">
