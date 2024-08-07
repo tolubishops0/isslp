@@ -11,7 +11,8 @@ const StyledHeader = styled.h1<{ active?: string }>`
   background: ${({ active }) =>
     active === "true"
       ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
-      : "black"};
+    : "black"
+      };
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

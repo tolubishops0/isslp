@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { UseFormRegister } from "react-hook-form";
 import { InputFieldPropss, AuthFormData } from "../../../types/global";
+import { passclose, passopen } from "@/lib/utils";
+import Image from "next/image";
 
 const StyledInputContainer = styled.div`
   position: relative;
@@ -10,7 +12,6 @@ const StyledInputContainer = styled.div`
 
 const StyledInput = styled.input`
   font-size: 1rem;
-  margin-bottom: 0.5rem;
   border: 1px solid #d0d5dd;
   border-radius: 6px;
   height: 3.5rem;
@@ -29,14 +30,13 @@ const StyledLabel = styled.p`
   color: black;
   font-weight: 600;
   font-size: 1rem;
-  margin-bottom: 0.3rem;
   text-transform: capitalize;
 `;
 
 const StyledToggleButton = styled.span`
   position: absolute;
-  right: 0.5rem;
-  top: 60%;
+  right: 1rem;
+  top: 65%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -47,8 +47,7 @@ const StyledToggleButton = styled.span`
 
 const ErrorMessage = styled.span`
   color: red;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
+  font-size: 0.7rem;
 `;
 
 export default function Input({
@@ -75,7 +74,10 @@ export default function Input({
       />
       {type === "password" && (
         <StyledToggleButton onClick={togglePasswordVisibility}>
-          {isPasswordVisible ? "Hide" : "Show"}
+          <Image
+            src={isPasswordVisible ? passopen : passclose}
+            alt="password-icon"
+          />
         </StyledToggleButton>
       )}
       {error && <ErrorMessage>{error}</ErrorMessage>}

@@ -11,12 +11,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signupSchema, loginSchema } from "@/lib/validationSchema";
 import { AuthFormData } from "../../../types/global";
 import Loader from "@/components/commonComp/Loader";
+import "../../components/commonComp/styles.css";
 
 export default function AuthPage() {
   const searchParams = useSearchParams();
   const params = searchParams.get("type") || "";
   const [authType, setAuthTpe] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isTermChecked, setIsTermChecked] = useState<boolean>(false);
 
   const {
     register,
@@ -63,14 +65,14 @@ export default function AuthPage() {
     );
   };
 
-  if (!authType) {
+  if (!authType || isLoading) {
     return <Loader />;
   }
 
   return (
-    <div className="h-[10h]">
-      {isLoading && <Loader />}
-      <div className="w-[80%] h-full mx-auto flex flex-col justify-center">
+    <>
+      {/* {isLoading && <Loader />} */}
+      <div className="w-full h-full lg:w-[80%] mx-auto flex flex-col gap-y-[2rem] pt-[2rem]">
         <div className="flex gap-x-6 justify-start items-center">
           <Link href="/auth?type=signup">
             <HeaderLink text="Sign up" path={authType === "signup"} />
@@ -80,10 +82,8 @@ export default function AuthPage() {
           </Link>
         </div>
 
-        <form
-          onSubmit={onSubmit}
-          className="flex flex-col gap-y-[2rem] mt-[2rem]">
-          <div className="flex flex-col gap-y-[.5rem]">
+        <form onSubmit={onSubmit} className="flex flex-col gap-y-[2rem]">
+          <div className="flex flex-col gap-y-[1rem]">
             {authType === "signup" && (
               <Input
                 label="Email"
@@ -120,14 +120,17 @@ export default function AuthPage() {
             )}
 
             {authType === "signup" && (
-              <div className="flex flex-col">
+              <div className="flex flex-col mt-2">
                 <div className="flex items-stretch">
                   <input
                     type="checkbox"
-                    className="bg-red-500 text-green-500"
-                    {...register("terms")}
+                    className="custom-checkbox"
+                    checked={isTermChecked}
+                    {...register("terms", {
+                      onChange: (e) => setIsTermChecked(e.target.checked),
+                    })}
                   />
-                  <span className="font-medium text-[#101928] text-sm sm:text-normal ml-2">
+                  <span className="font-medium text-[#101928] text-xs sm:text-normal ml-2">
                     I accept Intelligent Scholar’s Terms of Service and Privacy
                     Policy
                   </span>
@@ -143,8 +146,9 @@ export default function AuthPage() {
             )}
           </div>
 
-          <div className="flex flex-col gap-y-[1rem]">
+          <div className="flex flex-col gap-y-[.5rem]">
             <Button
+              // disabled={!isTermChecked}
               gradient="true"
               text={authType === "signup" ? "Sign up" : "Login"}
             />
@@ -165,6 +169,6 @@ export default function AuthPage() {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 }

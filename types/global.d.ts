@@ -68,6 +68,7 @@ export interface ButtonPropss {
   icon?: StaticImageData;
   color?: string;
   textcolor?: string;
+  disabled?: boolean;
 }
 
 export interface InputFieldProps {
