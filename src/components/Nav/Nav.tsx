@@ -5,6 +5,7 @@ import { logo, menu, cancel, navLinks, arrowndown } from "../../lib/utils";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAway } from "react-use";
+import Link from "next/link";
 
 export default function Nav() {
   const ref = useRef<HTMLDivElement>(null);
@@ -79,7 +80,10 @@ export default function Nav() {
         </div>
 
         <div className=" cursor-pointer hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-110 transition-all">
-          <button>Sign up</button>
+          <Link href="/auth?type=login">Login </Link>
+        </div>
+        <div className=" cursor-pointer hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-110 transition-all">
+          <Link href="/auth?type=signup">Sign up</Link>
         </div>
 
         <div

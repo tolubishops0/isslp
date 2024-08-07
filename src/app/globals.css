@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 .hero-form {
   box-shadow: -6px 8px 0px 0px #000000;
   border-color: #31280c;
@@ -129,3 +134,9 @@
     max-width: 35vw;
   }
 }
+
+/* //AUTH  */
+/* .auth-bg {
+  background: linear-gradient(153.86deg, #f3e9ff -33.96%, #f9f9f9 94.15%);
+} */
+

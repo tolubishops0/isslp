@@ -36,6 +36,12 @@ const config: Config = {
         xl: "1280px",
         "2xl": "1536px",
       },
+      backgroundImage: {
+        "auth-gradient-bg":
+          "linear-gradient(153.86deg, #f3e9ff -33.96%, #f9f9f9 94.15%)",
+        "primary-gradient-bg":
+          "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)",
+      },
     },
   },
   plugins: [],

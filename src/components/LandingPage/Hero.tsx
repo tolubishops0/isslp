@@ -13,7 +13,7 @@ import {
   pinkblur,
   chatbubble,
 } from "../../lib/utils";
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 import HeorForm from "./HeorForm";
 
 export default function Hero() {
@@ -122,9 +122,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 overflow-hidden bg-veryDarkGray w-full h-[4.75rem] flex items-center justify-center">
+      {/* <div className="absolute bottom-0 right-0 overflow-hidden bg-veryDarkGray w-full h-[4.75rem] flex items-center justify-center">
         <Carousel />
-      </div>
+      </div> */}
     </main>
   );
 }

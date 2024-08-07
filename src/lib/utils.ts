@@ -14,6 +14,8 @@ export { default as logo } from "../../public/assets/logo.svg";
 export { default as arrowndown } from "../../public/assets/arrowndown.svg";
 export { default as stressedguy } from "../../public/assets/stressedguy.svg";
 export { default as play } from "../../public/assets/play.svg";
+export { default as loginimg } from "../../public/assets/loginimg.svg";
+export { default as googlebutton } from "../../public/assets/googlebutton.svg";
 
 export const navLinks: NavLink[] = [
   {
