@@ -1,53 +1,44 @@
 import React from "react";
 import Image from "next/image";
-import {
-  greenstar,
-  smilignpe,
-  hero4sectionPropss,
-  sevenpad,
-} from "../../lib/utils";
+import { screbottom, andriodbut, screwtop, pinkk } from "../../lib/utils";
+import "./styles.css";
 
 export default function Solutions() {
   return (
-    <div className="bg-white">
-      <div className=" w-[90%] md:w-[70%] mx-auto py-[3rem] md:py-[4rem]">
-        <div className="unlock_intelligence relative">
-          <div className="pl-[1rem] md:pl-[2rem] z-50 mt-[3.5rem] flex flex-col gap-y-[2rem] sm:gap-y-[3rem] md:gap-y-[3rem] xl:gap-y-[2.5rem]">
-            <h1 className="text-white text-xl sm:text-4xl sm:leading-[1.5] md:text-3xl xl:text-[3rem] xl:leading-[1.5] font-semibold">
-              Unlock Your Potential with Intelligent Scholar
-            </h1>
-            <div className="z-50 flex items-start justify-start">
-              {hero4sectionPropss.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-between text-white w-[30%] md:w-[20%] ">
-                  <Image src={item.icon} alt="image" className="w-[2rem]" />
-                  <p className="text-center font-semibold text-[0.7rem] md:text-[0.875rem] leading-[1.1875] mt-3">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <button className="z-50 cursor-pointer w-[10rem] md:w-[13.75rem] flex items-center justify-center h-[2.5rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-95 transition-all">
-              View all Courses
-            </button>
-          </div>
-
-          <div className="absolute bottom-0 right-[5px] md:right-[-2px]">
-            <Image src={smilignpe} alt="image" className="" />
-          </div>
+    <div className="pt-[3rem] pb-[5rem] relative">
+      <div className="solution-container  w-[90%] md:w-[65%] mx-auto">
+        <div className="relative w-[90%] md:w-[75%] mx-auto flex flex-col gap-y-[1.5rem]">
+          <h1 className="font-semibold text-lg sm:text-2xl md:text-3xl xl:text-[2rem] text-white xl:leading-[2.1] text-center">
+            Get help with Intelligent Scholar AI
+          </h1>
+          <p className="text-[#FFFDFD] font-extralight text-sm text-center">
+            Don't struggle alone. Intelligent Scholar AI is here to assist you.
+            Experience the power of AI-driven learning. Try it now and see the
+            difference.
+          </p>
+          <button className="rounded-[10rem] mx-auto w-[17rem] md:w-[22rem] h-[3.5rem] flex items-center justify-center gap-x-2 bg-black">
+            <Image src={andriodbut} alt="andriodbut" className="w-[1.5rem]" />
+            <span className="text-sm md:text-[1.25rem] text-white font-semibold leading-[1.375]">
+              Chat with the smartest bot
+            </span>
+          </button>
           <Image
-            src={greenstar}
-            alt="image"
-            className="absolute top-[-8%] left-[-2%]"
+            src={screbottom}
+            alt="andriodbut"
+            className="hidden md:block w-[7rem] absolute bottom-[-62%] left-[-18%]"
           />
           <Image
-            src={sevenpad}
-            alt="image"
-            className="absolute top-[-9%] right-[-4%]"
+            src={screwtop}
+            alt="andriodbut"
+            className="hidden md:block w-[7rem] absolute top-[-62%] right-[-18%]"
           />
         </div>
       </div>
+      <Image
+        src={pinkk}
+        alt="andriodbut"
+        className="absolute bottom-0 right-0"
+      />
     </div>
   );
 }

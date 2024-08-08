@@ -1,16 +1,20 @@
+import { StaticImageData } from "next/image";
+
 import {
   NavLink,
   heroFormProps,
   hero2SectionProps,
   hero3SectionProps,
   hero6formProps,
+  NavLinkProps,
+  SubMenuItem,
 } from "../../types/global";
 
 //NAVBAR ASSETS
 
 export { default as menu } from "../..//public/assets/icons8-menu-24.png";
 export { default as cancel } from "../../public/assets/icons8-cancel-30.png";
-export { default as logo } from "../../public/assets/logo.svg";
+export { default as logo } from "../../public/assets/is logo 2.svg";
 export { default as arrowndown } from "../../public/assets/arrowndown.svg";
 export { default as stressedguy } from "../../public/assets/stressedguy.svg";
 export { default as play } from "../../public/assets/play.svg";
@@ -21,7 +25,7 @@ export { default as passopen } from "../../public/assets/passwordopen.svg";
 
 export const navLinks: NavLink[] = [
   {
-    label: "Study tools",
+    label: "Professional",
     subMenu: [
       {
         label: "with this",
@@ -34,7 +38,20 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    label: "Select language",
+    label: "Students",
+    subMenu: [
+      {
+        label: "spanish",
+        href: "",
+      },
+      {
+        label: "igbo",
+        href: "",
+      },
+    ],
+  },
+  {
+    label: "Test Takers",
     subMenu: [
       {
         label: "spanish",
@@ -60,11 +77,20 @@ export { default as intelstar } from "../../public/assets/intelstar.svg";
 export { default as bluerightframe } from "../../public/assets/bluerightframe.svg";
 export { default as yellowsmstart } from "../../public/assets/yellowsmstart.svg";
 export { default as pinkblur } from "../../public/assets/pinkblur.svg";
+export { default as rightsrart } from "../../public/assets/rightsrart.svg";
+export { default as leftstart } from "../../public/assets/leftstart.svg";
 export { default as smilignpe } from "../../public/assets/smilignpe.svg";
 export { default as greenstar } from "../../public/assets/greenstar.svg";
 export { default as sevenpad } from "../../public/assets/sevenpad.svg";
 export { default as goldstart } from "../../public/assets/goldstart.svg";
 export { default as chatbubble } from "../../public/assets/chatbubble.svg";
+export { default as whitedropdown } from "../../public/assets/whitedropdown.svg";
+export { default as carstart } from "../../public/assets/car-start.svg";
+export { default as andriodbut } from "../../public/assets/andriodbut.svg";
+export { default as screwtop } from "../../public/assets/screwtop.svg";
+export { default as screbottom } from "../../public/assets/screbottom.svg";
+export { default as pinkk } from "../../public/assets/pinkk.svg";
+export { default as heroblur } from "../../public/assets/Group 1000002462.svg";
 
 import fbicn from "../../public/assets/fbicn.svg";
 import xicn from "../../public/assets/xicn.svg";
@@ -91,13 +117,27 @@ import thirdpad from "../../public/assets/thirdpad.svg";
 import sixthpad from "../../public/assets/sixthpad.svg";
 import sevenpad from "../../public/assets/sevenpad.svg";
 
-import askaqust from "../../public/assets/askaqust.svg";
-import convertformat from "../../public/assets/convertformat.svg";
-import sumarize from "../../public/assets/sumarize.svg";
+import askaqust from "../../public/assets/ph_suitcase-bold.svg";
+import convertformat from "../../public/assets/ph_student-bold.svg";
+import sumarize from "../../public/assets/carbon_book.svg";
 
 import trackprogress from "../../public/assets/trackprogress.svg";
 import anywhere from "../../public/assets/anywhere.svg";
 import exams from "../../public/assets/exams.svg";
+
+import potemtial1 from "../../public/assets/potemtial1.svg";
+import potemtial2 from "../../public/assets/potemtial2.svg";
+import potemtial3 from "../../public/assets/potemtial3.svg";
+import potemtial4 from "../../public/assets/potemtial4.svg";
+import potemtial5 from "../../public/assets/potemtial5.svg";
+import potemtial6 from "../../public/assets/potemtial6.svg";
+import potemtial7 from "../../public/assets/potemtial7.svg";
+import potemtial8 from "../../public/assets/potemtial8.svg";
+import fb from "../../public/assets/fb.svg";
+import x from "../../public/assets/x.svg";
+import yt from "../../public/assets/yt.svg";
+
+export const socailIcons: StaticImageData[] = [fb, x, yt];
 
 export const heroForm: heroFormProps[] = [
   {
@@ -114,129 +154,72 @@ export const heroForm: heroFormProps[] = [
   },
 ];
 
-export const subjects: heroFormProps[] = [
-  {
-    label: "Math",
-    icon: subjetcstart,
-  },
-  {
-    label: "Science",
-    icon: subjetcstart,
-  },
-  {
-    label: "History",
-    icon: subjetcstart,
-  },
-  {
-    label: "English",
-    icon: subjetcstart,
-  },
-  {
-    label: "Art",
-    icon: subjetcstart,
-  },
-  {
-    label: "Music",
-    icon: subjetcstart,
-  },
-  {
-    label: "English",
-    icon: subjetcstart,
-  },
-  {
-    label: "Art",
-    icon: subjetcstart,
-  },
-  {
-    label: "Music",
-    icon: subjetcstart,
-  },
-
-  {
-    label: "Math",
-    icon: subjetcstart,
-  },
-  {
-    label: "Science",
-    icon: subjetcstart,
-  },
-  {
-    label: "History",
-    icon: subjetcstart,
-  },
-  {
-    label: "English",
-    icon: subjetcstart,
-  },
-  {
-    label: "Art",
-    icon: subjetcstart,
-  },
-  {
-    label: "Music",
-    icon: subjetcstart,
-  },
-  {
-    label: "English",
-    icon: subjetcstart,
-  },
-  {
-    label: "Art",
-    icon: subjetcstart,
-  },
-  {
-    label: "Music",
-    icon: subjetcstart,
-  },
+export const subjects: string[] = [
+  "WAEC",
+  "NECO",
+  "JAMB",
+  "GCE",
+  "NABTEB",
+  "POST-UTME",
+  "IJMB",
+  "JUPEB",
+  "IELTS",
+  "TOEFL",
+  "GRE",
+  "GMAT",
+  "SAT",
+  "ACT",
+  "ICAN",
+  "CFA",
+  "PMP",
+  "CISSP",
+  "LSAT",
+  "MCAT",
 ];
 
 export const hero2Section: hero2SectionProps[] = [
   {
     title: "Record Lecture/Meeting",
     text: "Effortlessly capture and summarize long lectures, saving time by providing concise key concept summaries for easy understanding and retention.",
-    img: hero2f,
-    icon: firstpad,
+    icon: potemtial1,
   },
   {
     title: "Test Driller",
     text: "Prepare for standardized tests with our AI-driven tool that analyzes past questions and trends. Get predictive test questions and take mock exams to maximize your success.",
-    img: hero2b,
-    icon: secpad,
+    icon: potemtial2,
   },
   {
     title: "Career Guidance",
     text: "Get personalized career advice based on your learning, goals, and resume. Explore career paths and make informed decisions with our AI-driven tool.",
-    img: hero2c,
-    icon: thirdpad,
+    icon: potemtial3,
   },
   {
     title: "Digital Flashcards",
     text: "Upload your study materials to instantly generate summarized flashcards, making it easier to comprehend and review key concepts.",
-    img: hero2d,
+    icon: potemtial4,
   },
   {
     title: "Listen on the Go",
     text: "Convert your notes to audio summaries and listen while you commute or multitask. Study efficiently anywhere, anytime.",
-    img: hero2a,
+    icon: potemtial5,
   },
   {
     title: "Advanced Research",
     text: "Utilize our AI-powered tools for in-depth research and analysis. Access comprehensive insights and data to support your academic and professional projects.",
-    img: hero2e,
-    icon: sixthpad,
+    icon: potemtial6,
   },
   {
     title: "Go to Class",
     text: "Attend interactive AI-led classes to deepen your understanding of complex topics. Get real-time explanations and support for anything you don’t grasp fully.",
-    img: hero2g,
-    icon: sevenpad,
+    icon: potemtial7,
   },
   {
     title: "Quiz Me",
     text: "Test your knowledge with personalized quizzes based on your study materials. Strengthen your understanding and retention with our AI-generated questions.",
-    img: hero2h,
+    icon: potemtial8,
   },
 ];
+
 export const hero3section: hero3SectionProps[] = [
   {
     title: "Tutorials in Introductory Physics",
@@ -323,5 +306,56 @@ export const socialIcon: heroFormProps[] = [
   {
     label: "facebook",
     icon: xicn,
+  },
+];
+
+export const footerLinksStudets: SubMenuItem[] = [
+  {
+    label: "Assignment",
+    href: "#",
+  },
+  {
+    label: "Quiz",
+    href: "#",
+  },
+  {
+    label: "Convert ",
+    href: "#",
+  },
+  {
+    label: "Digital flashcards",
+    href: "#",
+  },
+];
+export const footerLinksProf: SubMenuItem[] = [
+  {
+    label: "Exam prep",
+    href: "#",
+  },
+  {
+    label: "Career advice",
+    href: "#",
+  },
+  {
+    label: "Team collaboration ",
+    href: "#",
+  },
+];
+export const footerLinksTest: SubMenuItem[] = [
+  {
+    label: "Test prep",
+    href: "#",
+  },
+  {
+    label: "Practice tests",
+    href: "#",
+  },
+  {
+    label: "Mock exams",
+    href: "#",
+  },
+  {
+    label: "Study focus",
+    href: "#",
   },
 ];

@@ -9,14 +9,14 @@ import Footer from "../Footer/Footer";
 
 export default function Index() {
   return (
-    <>
-      <Nav/>
+    <main className="bg-landingpage-b bg-[#110013]">
+      <Nav />
       <Hero />
-      <Potential />
       <VideoSection />
-      <Solutions />
+      <Potential />
       <PastQuestion />
-      <Footer/>
-    </>
+      <Solutions />
+      <Footer />
+    </main>
   );
 }

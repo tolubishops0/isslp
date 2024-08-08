@@ -1,11 +1,20 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { logo, menu, cancel, navLinks, arrowndown } from "../../lib/utils";
+import {
+  logo,
+  menu,
+  cancel,
+  navLinks,
+  arrowndown,
+  whitedropdown,
+} from "../../lib/utils";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAway } from "react-use";
 import Link from "next/link";
+import Button from "../commonComp/Button";
+import GradientButton from "../commonComp/GradientButton";
 
 export default function Nav() {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,7 +55,7 @@ export default function Nav() {
   return (
     <nav className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[3rem] md:w-[3.5rem] z-30">
+        <div className="w-[40%] md:w-fit z-30">
           <Image alt="logo-image" src={logo} />
         </div>
 
@@ -55,9 +64,9 @@ export default function Nav() {
             <div key={index} className="relative ">
               <div
                 onClick={() => toggleSubMenu(index)}
-                className="cursor-pointer flex items-center gap-x-2 font-bold text-normal leading-normal text-primary">
+                className="cursor-pointer flex items-center gap-x-2 font-bold text-normal leading-normal text-white">
                 {item.label}
-                <Image alt="arr-image" src={arrowndown} />
+                <Image alt="arr-image" src={whitedropdown} />
               </div>
               <div className="z-50 absolute left-0 top-full w-full ">
                 {openSubMenu[index] && (
@@ -78,12 +87,13 @@ export default function Nav() {
             </div>
           ))}
         </div>
-
-        <div className=" cursor-pointer hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-110 transition-all">
-          <Link href="/auth?type=login">Login </Link>
-        </div>
-        <div className=" cursor-pointer hidden md:flex items-center justify-center w-[9rem] h-[3.125rem] rounded-lg bg-black text-white font-semibold leading-[1.375] active:scale-105 hover:scale-110 transition-all">
-          <Link href="/auth?type=signup">Sign up</Link>
+        <div className="hidden md:flex items-center gap-x-4 ">
+          <Link href="/auth?type=login" className="w-[9rem]">
+            <GradientButton text="Login" />
+          </Link>
+          <Link href="/auth?type=signup" className="w-[9rem]">
+            <Button gradient="true" text="Sign up" />
+          </Link>
         </div>
 
         <div

@@ -1,42 +1,78 @@
 import React from "react";
 import Image from "next/image";
-import { logo, socialIcon } from "../../lib/utils";
+import Link from "next/link";
+import {
+  logo,
+  socailIcons,
+  footerLinksProf,
+  footerLinksStudets,
+  footerLinksTest,
+} from "../../lib/utils";
 
 export default function Footer() {
+  const date = new Date().getFullYear();
   return (
-    <div className="bg-white h-[15rem] md:h-[10rem]">
-      <div className="w-[90%] mx-auto h-[10rem] flex-col md:flex-row flex items-start md:items-center justify-between gap-y-10 md:gap-0 py-4 md:py-0">
-        <Image src={logo} alt="logo" className="w-[4.625rem] md:w-[3.5rem]" />
-        <div className="flex flex-col justify-between items-start md:items-center gap-y-2 md:gap-y-8">
-          <div className="flex gap-x-4">
-            <p className="cursor-pointer font-bold text-normal leading-normal text-primary">
-              Study Tools
-            </p>
-            <p className="cursor-pointer font-bold text-normal leading-normal text-primary">
-              Contact
-            </p>
+    <div className="w-[90%] mx-auto flex-col md:flex-row flex items-start md:items-center justify-between gap-y-10 md:gap-0 py-[2.5rem]">
+      <div className="w-[90%] md:w-[26%] flex flex-col justify-start items-start gap-y-8">
+        <Image src={logo} alt="logo" />
+        <p className="text-[#FFFDFD] font-extralight text-sm pr-6">
+          Discover Your Full Potential with Intelligent Scholar
+        </p>
+        <div>
+          <div className="flex gap-x-3">
+            {socailIcons.map((item, index) => (
+              <Image
+                key={index}
+                src={item}
+                alt="logo"
+                className="hover:scale-110 transition duration-300 cursor-pointer"
+              />
+            ))}
           </div>
-          <div className="hidden md:flex">
-            <p className="font-normal leading-normal font-sans text-[0.75rem] text-black">
-              © Intelligent Scholar All Rights Reserved
-            </p>
-          </div>
+          <p className="mt-3 font-extralight leading-normal font-sans text-[0.75rem] text-white">
+            Copyright © Intelligent Scholar Inc. {date} All Rights Reserved.
+          </p>
         </div>
-        <div className="flex gap-x-3">
-          {socialIcon.map((item, index) => (
-            <Image
-              key={index}
-              src={item.icon}
-              alt="logo"
-              className="hover:scale-110 transition-all cursor-pointer"
-            />
+      </div>
+      <div className="w-full md:w-[40%] flex flex-wrap justify-between items-start gap-y-6">
+        <div className="flex flex-col gap-y-[0.65rem] ">
+          <p className="font-bold text-sm md:text-[1rem] text-white">
+            Students
+          </p>
+          {footerLinksStudets.map((item) => (
+            <Link
+              href={item.href}
+              className="text-sm font-extralight text-[#D8D3FF] hover:text-[#f7f7fa] transition duration-300"
+              key={item.label}>
+              {item.label}
+            </Link>
           ))}
         </div>
-
-        <div className="border-t-2 border-verydarkGray md:hidden flex items-center justify-center w-full">
-          <p className="text-center font-normal leading-normal font-sans text-[0.75rem] text-black pt-2">
-            © Intelligent Scholar All Rights Reserved
+        <div className="flex flex-col gap-y-[0.65rem]">
+          <p className="font-bold text-sm md:text-[1rem] text-white">
+            Professional
           </p>
+          {footerLinksProf.map((item) => (
+            <Link
+              href={item.href}
+              className="text-sm font-extralight text-[#D8D3FF] hover:text-[#f7f7fa] transition duration-300"
+              key={item.label}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-col gap-y-[0.65rem]">
+          <p className="font-bold text-sm md:text-[1rem] text-white">
+            Test Takers
+          </p>
+          {footerLinksTest.map((item) => (
+            <Link
+              href={item.href}
+              className="text-sm font-extralight text-[#D8D3FF] hover:text-[#f7f7fa] transition duration-300"
+              key={item.label}>
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

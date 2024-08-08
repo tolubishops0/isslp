@@ -37,6 +37,8 @@ const config: Config = {
         "2xl": "1536px",
       },
       backgroundImage: {
+        "landingpage-bg":
+          "linear-gradient(90.44deg, #F3ABFF 0.18%, #8044FF 82%)",
         "auth-gradient-bg":
           "linear-gradient(153.86deg, #f3e9ff -33.96%, #f9f9f9 94.15%)",
         "primary-gradient-bg":

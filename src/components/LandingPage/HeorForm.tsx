@@ -70,8 +70,8 @@ export default function HeorForm() {
             <div
               onClick={() => handleFormState(index)}
               key={item.label}
-              className={`flex-1 flex items-center justify-center  cursor-pointer border-[#31280C] ${
-                formState === index ? "bg-[#E9D5FF]" : ""
+              className={` flex-1 flex items-center justify-center  cursor-pointer border-[#31280C] transition duration-300 ${
+                formState === index ? "bg-[#E9D5FF]" : "bg-white"
               } ${
                 index === 0
                   ? "border-t-2 border-r-[1px] border-b-0 border-l-2"
@@ -85,7 +85,7 @@ export default function HeorForm() {
                   src={item.icon}
                   className="w-[1.5rem]"
                 />
-                <span className="mt-2 md:mt-0 text-center uppercase text-[0.5rem] md:text-[1rem]  text-darkBrown font-bold">
+                <span className="mt-2 md:mt-0 text-center uppercase text-[0.5rem] md:text-[1rem] text-[#1B0043] font-bold">
                   {item.label}
                 </span>
               </div>

@@ -38,9 +38,9 @@ export interface hero6formProps {
 export interface hero2SectionProps {
   text: string;
   title: string;
-  img: StaticImageData;
-  icon?: StaticImageData;
+  icon: StaticImageData;
 }
+
 export interface hero3SectionProps {
   text1: string;
   text2: string;
