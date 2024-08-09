@@ -22,9 +22,9 @@ import Carousel from "./Carousel";
 
 export default function Hero() {
   return (
-    <main className="relative bg-[rgba(255,244,161,0.1) flex items-start justify-center">
-      <div className="relative w-[90%] mx-auto flex flex-col justify-center  items-center mt-[4rem] mb-[10rem] xl:mt-[8rem] xl:mb-[16rem]">
-        <div className="relative w-full xl:w-[70%] flex flex-col items-center justify-center gap-y-[0.5rem] text-left xl:text-center">
+    <main className="relative flex items-start justify-center">
+      <div className="relative w-[90%] mx-auto flex flex-col justify-center items-center mt-[4rem] mb-[10rem] xl:mt-[8rem] xl:mb-[16rem]">
+        <div className="z-10 relative w-full xl:w-[70%] flex flex-col items-center justify-center gap-y-[0.5rem] text-left xl:text-center">
           <h1 className="font-bold text-[#FDFBFB] text-2xl leading-[2] md:leading-[1.2] md:text-5xl xl:text-[3.25rem]">
             Study with AI. Transform your Learning
           </h1>
@@ -34,26 +34,21 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="relative w-full xl:w-[92%] mt-10 z-10">
+        <div className="relative w-full xl:w-[92%] mt-[6.5rem] z-10">
           <HeorForm />
-          {/* <Image
-            src={bluerightframe}
-            alt="search-icon"
-            className="hidden z-[10001] xl:block absolute bottom-[-5%] right-[8.5%] w-[5%] h-auto "
-          /> */}
           <Image
             src={pinkblur}
             alt="search-icon"
             className="hidden xl:flex absolute top-0 right-[-10%] w-[30%]"
           />
           <motion.div
-            className="hidden xl:flex w-[2rem] absolute top-[-29%] left-[29%]"
+            className="hidden xl:flex w-[2rem] absolute top-[-70%] left-[29%]"
             animate={{ scaleX: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}>
             <Image src={leftstart} alt="search-icon" />
           </motion.div>
           <motion.div
-            className="hidden xl:flex w-[2rem] absolute top-[-60%] right-[36%]"
+            className="hidden xl:flex w-[2rem] absolute top-[-115%] right-[36%]"
             animate={{ scaleX: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}>
             <Image src={rightsrart} alt="search-icon" />
@@ -66,7 +61,7 @@ export default function Hero() {
           <Image
             src={rightwireframe}
             alt="search-icon"
-            className="hidden xl:block absolute bottom-[82%] right-[-1%] w-[15%] 2xl:w-[12%] 2xl:bottom-[60%] "
+            className="hidden xl:block absolute bottom-[120%] right-[-1%] w-[15%] 2xl:w-[12%] 2xl:bottom-[60%] "
           />
 
           <div className="z-[1000] chat-bubble fixed bottom-[13%] right-0 xl:absolute xl:bottom-[-55%] xl:right-[-8%] cursor-pointer active:scale-105 hover:scale-95 transition-all">
@@ -77,7 +72,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="z-[1000] w-full h-full absolute xl:top-[-70%] left-1/2 transform -translate-x-1/2">
+        <div className="z-0 w-full h-full absolute xl:top-[-70%] left-1/2 transform -translate-x-1/2">
           <Image
             alt="background-img"
             src={heroblur}

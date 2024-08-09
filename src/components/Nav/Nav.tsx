@@ -87,7 +87,7 @@ export default function Nav() {
             </div>
           ))}
         </div>
-        <div className="hidden md:flex items-center gap-x-4 ">
+        <div className="hidden md:flex items-center gap-x-4">
           <Link href="/auth?type=login" className="w-[9rem]">
             <GradientButton text="Login" />
           </Link>
