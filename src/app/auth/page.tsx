@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Header from "@/components/commonComp/Header";
 import Link from "next/link";
 import Input from "@/components/commonComp/Input";
@@ -14,6 +14,7 @@ import Loader from "@/components/commonComp/Loader";
 import "../../components/commonComp/styles.css";
 
 export default function AuthPage() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const params = searchParams.get("type") || "";
   const [authType, setAuthTpe] = useState<string>("");
@@ -40,7 +41,11 @@ export default function AuthPage() {
     try {
       await new Promise((resolve) => setTimeout(resolve, 3000));
       console.log("clicked", data);
-      // router.push("/dashboard");
+      {
+        authType === "signup"
+          ? router.push("/auth?type=login")
+          : router.push("/auth?type=login");
+      }
     } catch (error) {
       console.error("An error occurred:", error);
     } finally {
@@ -49,19 +54,27 @@ export default function AuthPage() {
     }
   });
 
-  const HeaderLink = ({ text, path }: { text: string; path: boolean }) => {
-    const gradientBorderStyle = {
-      borderImage: "linear-gradient(180deg, #8661AE 0%, #420C7C 100%) 1",
-    };
-
+  const HeaderBorder = () => {
     return (
       <div
-        className={`flex flex-col items-center pb-1 border-b-4 rounded-b-lg transition duration-300 ease-in-out ${
-          path ? "" : "border-transparent"
-        }`}
-        style={path ? gradientBorderStyle : {}}>
-        <Header active={path?.toString()} text={text} />
-      </div>
+        style={{
+          height: "0.3rem",
+          width: "full",
+          borderRadius: "1rem",
+          marginTop: "0.3rem",
+          background: "#110113",
+        }}></div>
+    );
+  };
+  const HeaderTransborder = () => {
+    return (
+      <div
+        style={{
+          height: "0.3rem",
+          width: "full",
+          marginTop: "0.3rem",
+          background: "transparent",
+        }}></div>
     );
   };
 
@@ -75,10 +88,12 @@ export default function AuthPage() {
       <div className="w-full h-full lg:w-[80%] mx-auto flex flex-col gap-y-[2rem] pt-[2rem]">
         <div className="flex gap-x-6 justify-start items-center">
           <Link href="/auth?type=signup">
-            <HeaderLink text="Sign up" path={authType === "signup"} />
+            <Header text="Sign up" />
+            {authType === "signup" ? <HeaderBorder /> : <HeaderTransborder />}
           </Link>
           <Link href="/auth?type=login">
-            <HeaderLink text="Log in" path={authType === "login"} />
+            <Header text="Log in" />
+            {authType === "login" ? <HeaderBorder /> : <HeaderTransborder />}
           </Link>
         </div>
 
@@ -148,8 +163,7 @@ export default function AuthPage() {
 
           <div className="flex flex-col gap-y-[.5rem]">
             <Button
-              // disabled={!isTermChecked}
-              gradient="true"
+              bgcolor="#1B004E"
               text={authType === "signup" ? "Sign up" : "Login"}
             />
 
@@ -161,7 +175,6 @@ export default function AuthPage() {
               </div>
             </div>
             <Button
-              gradient="false"
               text="Continue with Google"
               icon={googlebutton}
               textcolor="#98a2b3"

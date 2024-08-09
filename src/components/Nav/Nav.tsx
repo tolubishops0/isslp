@@ -88,10 +88,10 @@ export default function Nav() {
           ))}
         </div>
         <div className="hidden md:flex items-center gap-x-4">
-          <Link href="/auth?type=login" className="w-[9rem]">
+          <Link href="/auth?type=login" className="w-[9rem]" passHref>
             <GradientButton text="Login" />
           </Link>
-          <Link href="/auth?type=signup" className="w-[9rem]">
+          <Link href="/auth?type=signup" className="w-[9rem]" passHref>
             <Button gradient="true" text="Sign up" />
           </Link>
         </div>

@@ -64,11 +64,10 @@ export interface HeaderProps {
 }
 export interface ButtonPropss {
   text: string;
-  gradient?: string;
   icon?: StaticImageData;
-  color?: string;
+  bgcolor?: string;
   textcolor?: string;
-  disabled?: boolean;
+  gradient?: string
 }
 
 export interface InputFieldProps {

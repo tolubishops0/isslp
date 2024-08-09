@@ -1,17 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ButtonPropss } from "../../../types/global";
 import Image from "next/image";
 
-const StyedButton = styled.button<{ gradient?: string; disabled?: boolean }>`
-  background-image: ${({ gradient, disabled }) =>
-    gradient === "transparent"
-      ? "transparent"
-      : gradient === "true"
-      ? "linear-gradient(92.14deg, #DB00FF 0%, #5200FF 100%);"
-      : // ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
-        "rgba(255, 255, 255, 1)"};
+const StyledButton = styled.button<{ bgcolor?: string; gradient?: string }>`
+  background: ${({ bgcolor, gradient }) =>
+    bgcolor
+      ? bgcolor
+      : (gradient === "true"
+          ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
+          : "white")};
 
   height: 3rem;
   width: 100%;
@@ -21,16 +20,18 @@ const StyedButton = styled.button<{ gradient?: string; disabled?: boolean }>`
   border-radius: 0.5rem;
   cursor: pointer;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  transition: background-image 0.3s ease-in;
+  transition: background 0.2s ease-in;
   &:hover {
-    background-image: ${({ gradient, disabled }) =>
-      !disabled && gradient === "true"
-        ? "linear-gradient(180deg, rgba(134, 97, 174, 0.5) 0%, rgba(66, 12, 124, 0.9) 100%)"
-        : "rgba(255, 255, 255, 0.2)"};
+    background: ${({ bgcolor, gradient }) =>
+      bgcolor
+        ? "rgba(27, 0, 78, .9)"
+        : gradient
+        ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
+        : "rgba(255, 255, 255, 0.5)"};
   }
 `;
 
-const StyedButtonText = styled.p<{ textcolor?: string }>`
+const StyledButtonText = styled.p<{ textcolor?: string }>`
   color: ${({ textcolor }) => (textcolor ? textcolor : "white")};
   font-weight: 700;
   font-size: 1.125rem;
@@ -43,18 +44,15 @@ const StyedButtonText = styled.p<{ textcolor?: string }>`
 
 export default function Button({
   text,
-  gradient,
+  bgcolor,
   icon,
   textcolor,
-  disabled,
+  gradient,
 }: ButtonPropss) {
-  console.log(disabled);
   return (
-    <StyedButton
-      // disabled={disabled}
-      gradient={gradient}>
+    <StyledButton bgcolor={bgcolor} gradient={gradient}>
       {icon && <Image src={icon} alt="button-icon" className="mr-3 w-[1rem]" />}
-      <StyedButtonText textcolor={textcolor}>{text}</StyedButtonText>
-    </StyedButton>
+      <StyledButtonText textcolor={textcolor}>{text}</StyledButtonText>
+    </StyledButton>
   );
 }
