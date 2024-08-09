@@ -67,7 +67,7 @@ export interface ButtonPropss {
   icon?: StaticImageData;
   bgcolor?: string;
   textcolor?: string;
-  gradient?: string
+  gradient?: string;
 }
 
 export interface InputFieldProps {
@@ -92,4 +92,14 @@ export interface InputFieldPropss {
   fieldname: keyof AuthFormData;
   error?: string;
   register: UseFormRegister<AuthFormData>;
+}
+
+export interface DropdownOption {
+  option: string;
+  icon?: string;
+}
+
+export interface DropdownProps {
+  options: DropdownOption[];
+  placeholder: string;
 }

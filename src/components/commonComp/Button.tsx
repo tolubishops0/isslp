@@ -8,9 +8,9 @@ const StyledButton = styled.button<{ bgcolor?: string; gradient?: string }>`
   background: ${({ bgcolor, gradient }) =>
     bgcolor
       ? bgcolor
-      : (gradient === "true"
-          ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
-          : "white")};
+      : gradient === "true"
+      ? "linear-gradient(180deg, #8661AE 0%, #420C7C 100%)"
+      : "white"};
 
   height: 3rem;
   width: 100%;

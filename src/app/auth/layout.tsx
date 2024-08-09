@@ -9,7 +9,7 @@ export default function AuthLayout({
 }>) {
   return (
     <div className=" bg-auth-gradient-bg flex justify-start">
-      <div className="hidden lg:block w-1/2 h-full">
+      <div className="hidden lg:block w-1/2 h-[100vh]">
         <Image
           src={loginimg}
           alt="auth-sideimage"

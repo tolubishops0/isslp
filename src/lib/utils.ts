@@ -8,6 +8,8 @@ import {
   hero6formProps,
   NavLinkProps,
   SubMenuItem,
+  DropdownProps,
+  DropdownOption,
 } from "../../types/global";
 
 //NAVBAR ASSETS
@@ -91,6 +93,7 @@ export { default as screwtop } from "../../public/assets/screwtop.svg";
 export { default as screbottom } from "../../public/assets/screbottom.svg";
 export { default as pinkk } from "../../public/assets/pinkk.svg";
 export { default as heroblur } from "../../public/assets/Group 1000002462.svg";
+export { default as arrdownblck } from "../../public/assets/arrow-downblck.svg";
 
 import fbicn from "../../public/assets/fbicn.svg";
 import xicn from "../../public/assets/xicn.svg";
@@ -136,6 +139,7 @@ import potemtial8 from "../../public/assets/potemtial8.svg";
 import fb from "../../public/assets/fb.svg";
 import x from "../../public/assets/x.svg";
 import yt from "../../public/assets/yt.svg";
+import nigeria from "../../public/assets/nigeria.svg";
 
 export const socailIcons: StaticImageData[] = [fb, x, yt];
 
@@ -358,4 +362,22 @@ export const footerLinksTest: SubMenuItem[] = [
     label: "Study focus",
     href: "#",
   },
+];
+
+export const countries: DropdownOption[] = [
+  { option: "United States", icon: nigeria },
+  { option: "Canada", icon: nigeria },
+  { option: "Germany", icon: nigeria },
+  { option: "Japan", icon: nigeria },
+  { option: "United Kingdom", icon: nigeria },
+  { option: "France", icon: nigeria },
+  { option: "Australia", icon: nigeria },
+  { option: "India", icon: nigeria },
+  { option: "China", icon: nigeria },
+  { option: "South Africa", icon: nigeria },
+  { option: "Brazil", icon: nigeria },
+  { option: "Russia", icon: nigeria },
+  { option: "Mexico", icon: nigeria },
+  { option: "Italy", icon: nigeria },
+  { option: "South Korea", icon: nigeria },
 ];
