@@ -14,7 +14,7 @@ export default function SelectCountry() {
         <div className="flex justify-center items-center">
           <Header text="Select your country here 👇" />
         </div>
-        <div className="flex flex-col gap-y-6 mt-[3rem]">
+        <div className="flex flex-col gap-y-8 mt-[3rem]">
           <InputDropdown
             placeholder="select your country"
             options={countries}

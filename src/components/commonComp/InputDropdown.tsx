@@ -35,7 +35,7 @@ const StyledInputDropdown = styled.div<{ isDropdownVisible: boolean }>`
 const StyledInput = styled.input<{ hasIcon: boolean }>`
   font-size: 1rem;
   border: 1px solid #d0d5dd;
-  background-color: white;
+  background-color: #f9fafb;
   border-radius: 6px;
   height: 3.4rem;
   width: 100%;

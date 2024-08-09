@@ -8,7 +8,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className=" bg-auth-gradient-bg flex justify-start">
+    <div className="flex justify-start">
       <div className="hidden lg:block w-1/2 h-[100vh]">
         <Image
           src={loginimg}

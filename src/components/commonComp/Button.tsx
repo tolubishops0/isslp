@@ -19,6 +19,7 @@ const StyledButton = styled.button<{ bgcolor?: string; gradient?: string }>`
   justify-content: center;
   border-radius: 0.5rem;
   cursor: pointer;
+  border: 1px solid #667185;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   transition: background 0.2s ease-in;
   &:hover {
