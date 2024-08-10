@@ -44,7 +44,7 @@ export default function AuthPage() {
       {
         authType === "signup"
           ? router.push("/auth?type=login")
-          : router.push("/auth?type=login");
+          : router.push("/profile/select-country");
       }
     } catch (error) {
       console.error("An error occurred:", error);
@@ -163,7 +163,7 @@ export default function AuthPage() {
 
           <div className="flex flex-col gap-y-[.5rem]">
             <Button
-              bgcolor="#1B004E"
+              gradient="true"
               text={authType === "signup" ? "Sign up" : "Login"}
             />
 

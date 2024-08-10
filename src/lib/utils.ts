@@ -94,6 +94,9 @@ export { default as screbottom } from "../../public/assets/screbottom.svg";
 export { default as pinkk } from "../../public/assets/pinkk.svg";
 export { default as heroblur } from "../../public/assets/Group 1000002462.svg";
 export { default as arrdownblck } from "../../public/assets/arrow-downblck.svg";
+export { default as chatboxnobg } from "../../public/assets/chatboxnobg.svg";
+export { default as chatboxwithbg } from "../../public/assets/chatboxwithbg.svg";
+export { default as loader } from "../../public/assets/loader.svg";
 
 import fbicn from "../../public/assets/fbicn.svg";
 import xicn from "../../public/assets/xicn.svg";
@@ -380,4 +383,12 @@ export const countries: DropdownOption[] = [
   { option: "Mexico", icon: nigeria },
   { option: "Italy", icon: nigeria },
   { option: "South Korea", icon: nigeria },
+];
+
+export const todoListAuth = [
+  "Learn",
+  "Prepare for exam",
+  "Career Guidance",
+  "CV Sanning",
+  "Ask I-scholar",
 ];

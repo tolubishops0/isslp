@@ -96,10 +96,11 @@ export interface InputFieldPropss {
 
 export interface DropdownOption {
   option: string;
-  icon?: string;
+  icon?: StaticImageData;
 }
 
 export interface DropdownProps {
   options: DropdownOption[];
   placeholder: string;
+  getValue: (value: DropdownOption) => void;
 }

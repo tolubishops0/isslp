@@ -32,14 +32,14 @@ const StyledInputDropdown = styled.div<{ isDropdownVisible: boolean }>`
   }
 `;
 
-const StyledInput = styled.input<{ hasIcon: boolean }>`
+const StyledInput = styled.input<{ hasicon: boolean }>`
   font-size: 1rem;
   border: 1px solid #d0d5dd;
   background-color: #f9fafb;
   border-radius: 6px;
   height: 3.4rem;
   width: 100%;
-  padding-left: ${({ hasIcon }) => (hasIcon ? "2.4rem" : ".5rem")};
+  padding-left: ${({ hasicon }) => (hasicon ? "2.4rem" : ".5rem")};
   cursor: pointer;
   &::placeholder {
     font-weight: 400;
@@ -83,12 +83,17 @@ const StyledToggleOption = styled.div`
   }
 `;
 
-export default function InputDropdown({ options, placeholder }: DropdownProps) {
+export default function InputDropdown({
+  options,
+  placeholder,
+  getValue,
+}: DropdownProps) {
   const [isDropdownVisible, setIsDropdownVisible] = useState<boolean>(false);
   const [value, setValue] = useState<DropdownOption | null>(null);
 
   const handleOptionSelection = (option: DropdownOption) => {
     setValue(option);
+    getValue(option);
     setIsDropdownVisible(false);
   };
 
@@ -99,7 +104,7 @@ export default function InputDropdown({ options, placeholder }: DropdownProps) {
         readOnly
         placeholder={placeholder}
         value={value?.option || ""}
-        hasIcon={!!value?.icon}
+        hasicon={!!value?.icon}
       />
       {value?.icon && (
         <StyledOptionIcon>

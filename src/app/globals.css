@@ -36,3 +36,29 @@ textarea:focus {
   border-radius: inherit;
 }
 
+/* AUTH PAGE TODO */
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  color: #98A2B3;
+  font-weight: normal;
+  border: 1px solid #d0d5dd;
+  cursor: pointer;
+  background-color: #F9FAFB;
+  transition: background-image 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #e1f0fd;
+}
+
+.tab-active {
+  background-image: linear-gradient(90deg, #9e00ff 0%, #00ddff 100%);
+  color: white;
+  border: 1px solid transparent;
+}

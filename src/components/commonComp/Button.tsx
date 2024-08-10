@@ -19,11 +19,12 @@ const StyledButton = styled.button<{ bgcolor?: string; gradient?: string }>`
   justify-content: center;
   border-radius: 0.5rem;
   cursor: pointer;
-  border: 1px solid #667185;
+  border: ${({ bgcolor, gradient }) =>
+    bgcolor || gradient ? "1px thin transparent" : "1px solid #667185"};
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  transition: background 0.2s ease-in;
+  transition: background-image 0.2s ease-in;
   &:hover {
-    background: ${({ bgcolor, gradient }) =>
+    background-image: ${({ bgcolor, gradient }) =>
       bgcolor
         ? "rgba(27, 0, 78, .9)"
         : gradient
@@ -34,7 +35,7 @@ const StyledButton = styled.button<{ bgcolor?: string; gradient?: string }>`
 
 const StyledButtonText = styled.p<{ textcolor?: string }>`
   color: ${({ textcolor }) => (textcolor ? textcolor : "white")};
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.125rem;
   text-align: center;
   transition: color 0.3s ease-in;
