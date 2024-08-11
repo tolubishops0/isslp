@@ -15,7 +15,7 @@ export default function SelectCountry() {
   const getCountry = (option: DropdownOption) => {
     setCountry(option);
   };
-  
+
   return (
     <div className="w-full h-[100vh] lg:w-[80%] mx-auto flex flex-col gap-y-[2rem] pt-[2rem]">
       <ProgressBar progress={50} />
@@ -29,10 +29,10 @@ export default function SelectCountry() {
             options={countries}
             getValue={getCountry}
           />
-          <Link href="/profile/todo">
+          <Link href="/auth/todo">
             <Button gradient="true" text="Next" />
           </Link>
-          <Link href="/profile/todo">
+          <Link href="/auth/todo">
             <Button textcolor="#98a2b3" text="Do this later!" />
           </Link>
         </div>

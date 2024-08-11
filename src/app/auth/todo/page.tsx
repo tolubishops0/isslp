@@ -15,6 +15,7 @@ export default function TodoPage() {
     setActiveTab(value);
     setTodo(value);
   };
+  
   return (
     <div className="w-full h-[100vh] lg:w-[80%] mx-auto flex flex-col gap-y-[2rem] pt-[2rem]">
       <ProgressBar progress={100} />

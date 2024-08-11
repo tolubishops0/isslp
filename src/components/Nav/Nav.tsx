@@ -9,14 +9,16 @@ import {
   arrowndown,
   whitedropdown,
 } from "../../lib/utils";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAway } from "react-use";
 import Link from "next/link";
 import Button from "../commonComp/Button";
-import GradientButton from "../commonComp/GradientButton";
+import GradientButton from "../commonComp/GradientBorderButton";
 
 export default function Nav() {
+  const router = useRouter();
   const ref = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLDivElement>(null);
   const [openMenu, setOpenMenu] = useState(false);
@@ -55,11 +57,11 @@ export default function Nav() {
   return (
     <nav className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[40%] md:w-fit z-30">
+        <div className="w-[50%] md:w-fit">
           <Image alt="logo-image" src={logo} />
         </div>
 
-        <div className="hidden w-fit md:flex gap-x-4 xl:gap-x-8 relative">
+        <div className="z-[1000] hidden w-fit md:flex gap-x-4 xl:gap-x-8 relative">
           {navLinks.map((item, index) => (
             <div key={index} className="relative ">
               <div
@@ -87,17 +89,22 @@ export default function Nav() {
             </div>
           ))}
         </div>
-        <div className="hidden md:flex items-center gap-x-4">
-          <Link href="/auth?type=login" className="w-[9rem]" >
+
+        <div className="z-[1000] hidden md:flex items-center gap-x-4">
+          <div
+            onClick={() => router.push("/auth?type=login")}
+            className="w-[9rem]">
             <GradientButton text="Login" />
-          </Link>
-          <Link href="/auth?type=signup" className="w-[9rem]" >
+          </div>
+          <div
+            onClick={() => router.push("/auth?type=signup")}
+            className="w-[9rem]">
             <Button gradient="true" text="Sign up" />
-          </Link>
+          </div>
         </div>
 
         <div
-          className="z-30 md:hidden transition duration-1000 delay-100 cursor-pointer"
+          className="z-30 md:hidden transition duration-1000 delay-100 cursor-pointer w-8"
           ref={menuButtonRef}
           onClick={toggleMenu}>
           <Image alt="menu-image" src={openMenu ? cancel : menu} />

@@ -8,7 +8,6 @@ export default function HeorForm() {
 
   const handleFormState = (index: number) => {
     setFormState(index);
-    console.log("clicked");
   };
 
   const TopArea = () => {

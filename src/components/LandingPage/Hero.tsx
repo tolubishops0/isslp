@@ -19,6 +19,7 @@ import {
 import "./styles.css";
 import HeorForm from "./HeorForm";
 import Carousel from "./Carousel";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -63,13 +64,14 @@ export default function Hero() {
             alt="search-icon"
             className="hidden xl:block absolute bottom-[120%] right-[-1%] w-[15%] 2xl:w-[12%] 2xl:bottom-[60%] "
           />
-
-          <div className="z-[1000] chat-bubble fixed bottom-[13%] right-0 xl:absolute xl:bottom-[-55%] xl:right-[-8%] cursor-pointer active:scale-105 hover:scale-95 transition-all">
-            <Image src={chatbubble} alt="search-icon" />
-            <span className="font-semibold text-xs md:text-normal text-white md:leading-relaxed">
-              Chat with the smartest bot
-            </span>
-          </div>
+          <Link href={"#"}>
+            <div className="z-[1000] chat-bubble fixed bottom-[13%] right-0 xl:absolute xl:bottom-[-55%] xl:right-[-8%] cursor-pointer active:scale-105 hover:scale-95 transition-all">
+              <Image src={chatbubble} alt="search-icon" />
+              <span className="font-semibold text-xs md:text-normal text-white md:leading-relaxed">
+                Chat with the smartest bot
+              </span>
+            </div>
+          </Link>
         </div>
 
         <div className="z-0 w-full h-full absolute xl:top-[-70%] left-1/2 transform -translate-x-1/2">

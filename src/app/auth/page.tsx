@@ -40,14 +40,13 @@ export default function AuthPage() {
     setIsLoading(true);
     try {
       await new Promise((resolve) => setTimeout(resolve, 3000));
-      console.log("clicked", data);
+      console.log("submitted", data);
       {
         authType === "signup"
           ? router.push("/auth?type=login")
-          : router.push("/profile/select-country");
+          : router.push("/auth/select-country");
       }
     } catch (error) {
-      console.error("An error occurred:", error);
     } finally {
       setIsLoading(false);
       reset();
@@ -179,6 +178,11 @@ export default function AuthPage() {
               icon={googlebutton}
               textcolor="#98a2b3"
             />
+            {/* <Button
+              text="Continue with Facebook"
+              icon={googlebutton}
+              textcolor="#98a2b3"
+            /> */}
           </div>
         </form>
       </div>

@@ -30,7 +30,7 @@ export default function VideoSection() {
   };
 
   return (
-    <div className="bg-inherit py-[3.5rem]">
+    <div className="py-[3.5rem]">
       <div className="w-[90%] mx-auto">
         <h1 className="font-semibold text-lg sm:text-2xl md:text-3xl xl:text-[2rem] text-white xl:leading-[2.1] text-center">
           Elevate your learning journey with Intelligent Scholar!
@@ -39,14 +39,11 @@ export default function VideoSection() {
           {!isPlaying ? (
             <div className="video-container w-full h-full md:w-[80% xl:w-[70%] mx-auto overflow-hidden">
               <Image
-                layout="fiil"
-                objectFit="cover"
-                objectPosition="center"
                 src={stressedguy}
                 alt="stressed-guy"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
+              <div className="absolute inset-0 flex items-center justify-center ">
                 <Image
                   onClick={handlePlay}
                   src={play}

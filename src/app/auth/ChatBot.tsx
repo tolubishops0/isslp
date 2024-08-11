@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useGlobalContext } from "./ProfileContext";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { chatboxnobg, chatboxwithbg, loader } from "@/lib/utils";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useGlobalContext } from "./ProfileContext";
 
 type AnimatedTextProps = {
   text: string;
@@ -53,7 +53,7 @@ export default function ChatBot() {
   const [thirdTextComplete, setThirdTextComplete] = useState<boolean | "">(
     false
   );
-  const todoPath = pathname === "/profile/todo";
+  const todoPath = pathname === "/auth/todo";
 
   return (
     <div className="w-full h-full">
