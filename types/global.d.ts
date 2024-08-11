@@ -18,7 +18,9 @@ export interface NavLink {
 
 export interface SubMenuItem {
   label: string;
+  label2?: string;
   href: string;
+  icon?: StaticImageData;
 }
 
 export interface NavLinkProps {

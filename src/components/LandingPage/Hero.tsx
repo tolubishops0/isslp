@@ -43,8 +43,8 @@ export default function Hero() {
             className="hidden xl:flex absolute top-0 right-[-10%] w-[30%]"
           />
           <motion.div
-            className="hidden xl:flex w-[2rem] absolute top-[-70%] left-[29%]"
-            animate={{ scaleX: [1, 1.2, 1] }}
+            className="hidden xl:flex w-[2rem] absolute top-[-75%] left-[29%]"
+            animate={{ scaleX: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity }}>
             <Image src={leftstart} alt="search-icon" />
           </motion.div>

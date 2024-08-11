@@ -14,10 +14,11 @@ import {
 
 //NAVBAR ASSETS
 
-export { default as menu } from "../..//public/assets/icons8-menu-24.png";
+export { default as menu } from "../../public/assets/icons8-menu-24.png";
 export { default as cancel } from "../../public/assets/icons8-cancel-30.png";
 export { default as logo } from "../../public/assets/is logo 2.svg";
 export { default as arrowndown } from "../../public/assets/arrowndown.svg";
+export { default as gradarrowndown } from "../../public/assets/gradientdropdown.svg";
 export { default as stressedguy } from "../../public/assets/stressedguy.svg";
 export { default as play } from "../../public/assets/play.svg";
 export { default as loginimg } from "../../public/assets/loginimg.svg";
@@ -25,17 +26,61 @@ export { default as googlebutton } from "../../public/assets/googlebutton.svg";
 export { default as passclose } from "../../public/assets/passclose.svg";
 export { default as passopen } from "../../public/assets/passwordopen.svg";
 
+import submenuicon1 from "../../public/assets/icon1.svg";
+import submenuicon2 from "../../public/assets/icon2.svg";
+import submenuicon3 from "../../public/assets/icon3.svg";
+import submenuicon4 from "../../public/assets/icon4.svg";
+import submenuicon5 from "../../public/assets/icon5.svg";
+import submenuicon6 from "../../public/assets/icon6.svg";
+import submenuicon7 from "../../public/assets/icon7.svg";
+import submenuicon8 from "../../public/assets/icon8.svg";
+import submenuicon9 from "../../public/assets/icon9.svg";
+
 export const navLinks: NavLink[] = [
   {
     label: "Professional",
     subMenu: [
       {
-        label: "with this",
+        label: "Assignment help?",
+        label2: "Get expert guidance on your assignments",
         href: "",
+        icon: submenuicon1,
       },
       {
-        label: "with that",
+        label: "Audio lectures",
+        label2: "Convert your lectures into easy-to-listen format",
         href: "",
+        icon: submenuicon2,
+      },
+      {
+        label: "Practice exams",
+        label2: "Prepare for exams with realistic practice tests",
+        href: "",
+        icon: submenuicon1,
+      },
+      {
+        label: "Group Study",
+        label2: "Collaborate with peers for better learning outcome",
+        href: "",
+        icon: submenuicon4,
+      },
+      {
+        label: "Digital Flashcards",
+        label2: "Create and study flashcards for effective learning",
+        href: "",
+        icon: submenuicon4,
+      },
+      {
+        label: "Note Summary",
+        label2: "Quickly summarize your notes for efficient review.",
+        href: "",
+        icon: submenuicon1,
+      },
+      {
+        label: "Lecture recording",
+        label2: "Capture your lectures for later review.",
+        href: "",
+        icon: submenuicon3,
       },
     ],
   },
@@ -43,12 +88,40 @@ export const navLinks: NavLink[] = [
     label: "Students",
     subMenu: [
       {
-        label: "spanish",
+        label: "Exam preparation",
+        label2: "Prepare for professional certifications or exams.",
         href: "",
+        icon: submenuicon1,
       },
       {
-        label: "igbo",
+        label: "Career guidance",
+        label2: "Get personalized career guidance and support.",
         href: "",
+        icon: submenuicon5,
+      },
+      {
+        label: "Document summarization",
+        label2: "Quickly summarize lengthy documents",
+        href: "",
+        icon: submenuicon6,
+      },
+      {
+        label: "Meeting summaries",
+        label2: "Create and study flashcards for effective learning",
+        href: "",
+        icon: submenuicon7,
+      },
+      {
+        label: " Audio notes",
+        label2: "Convert your notes into audio for easy listening",
+        href: "",
+        icon: submenuicon2,
+      },
+      {
+        label: "Team collaboration",
+        label2: ": Work together with your team efficiently.",
+        href: "",
+        icon: submenuicon8,
       },
     ],
   },
@@ -56,13 +129,30 @@ export const navLinks: NavLink[] = [
     label: "Test Takers",
     subMenu: [
       {
-        label: "spanish",
+        label: "Test preparation",
+        label2: "Prepare for professional certifications or exams.",
         href: "",
+        icon: submenuicon1
       },
       {
-        label: "igbo",
+        label: "Practice quizzes",
+        label2: "Get personalized career guidance and support.",
         href: "",
+        icon: submenuicon6
       },
+      {
+        label: "Mock exams",
+        label2: "Simulate exam conditions for better preparation.",
+        href: "",
+        icon:submenuicon7
+      },
+      {
+        label: "Study focus",
+        label2: "Identify key areas to concentrate on",
+        href: "",
+        icon: submenuicon9
+      },
+      
     ],
   },
 ];

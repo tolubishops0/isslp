@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useRef } from "react";
 import {
   logo,
@@ -8,80 +7,95 @@ import {
   navLinks,
   arrowndown,
   whitedropdown,
+  gradarrowndown,
 } from "../../lib/utils";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAway } from "react-use";
-import Link from "next/link";
 import Button from "../commonComp/Button";
 import GradientButton from "../commonComp/GradientBorderButton";
+import { NavLink } from "../../../types/global";
 
 export default function Nav() {
   const router = useRouter();
   const ref = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLDivElement>(null);
-  const [openMenu, setOpenMenu] = useState(false);
-  const [openSubMenu, setOpenSubMenu] = useState(
-    Array(navLinks.length).fill(false)
-  );
+  const [togggleMenuButton, setTogggleMenuButton] = useState<boolean>(false);
+  const [showSubMenu, setShowSubMenu] = useState<string | "">("");
 
   useClickAway(ref, (event) => {
     const target = event.target as Node;
     if (menuButtonRef.current && menuButtonRef.current.contains(target)) {
       return;
     }
-    setOpenMenu(false);
+    setShowSubMenu("");
+    setTogggleMenuButton(false);
   });
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-    if (!openMenu) {
-      setOpenSubMenu(Array(navLinks.length).fill(false));
-    }
+  const toggleMenuIcon = () => {
+    setTogggleMenuButton(!togggleMenuButton);
   };
 
-  const toggleSubMenu = (index: number) => {
-    const updatedSubMenus = [...openSubMenu];
-    updatedSubMenus[index] = !updatedSubMenus[index];
-    setOpenSubMenu(updatedSubMenus);
+  const toggleMenu = (item: NavLink) => {
+    setShowSubMenu(showSubMenu === item.label ? "" : item.label);
   };
 
-  const handleMenuSelection = (index: number, item: string) => {
-    setOpenMenu(false);
-    const updatedSubMenus = [...openSubMenu];
-    updatedSubMenus[index] = false;
-    setOpenSubMenu(updatedSubMenus);
+  const handleMenuSelection = (item: NavLink) => {
+    setTogggleMenuButton(false);
+    setShowSubMenu("");
   };
 
   return (
     <nav className="w-[90%] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
-        <div className="w-[50%] md:w-fit">
+        <div className="z-30 w-[50%] md:w-fit">
           <Image alt="logo-image" src={logo} />
         </div>
 
-        <div className="z-[1000] hidden w-fit md:flex gap-x-4 xl:gap-x-8 relative">
+        <div className="z-[1000] hidden w-fit md:flex gap-x-4 xl:gap-x-8 relatve">
           {navLinks.map((item, index) => (
-            <div key={index} className="relative ">
+            <div
+              // ref={ref}
+              key={index}
+              className="relative ">
               <div
-                onClick={() => toggleSubMenu(index)}
-                className="cursor-pointer flex items-center gap-x-2 font-bold text-normal leading-normal text-white">
+                onClick={() => toggleMenu(item)}
+                className={`cursor-pointer flex items-center gap-x-1 font-bold text-normal leading-normal transition duration-300 hover:text-[rgba(255,255,255,0.9)] ${
+                  showSubMenu === item.label ? "active-tab" : "text-white"
+                } `}>
                 {item.label}
-                <Image alt="arr-image" src={whitedropdown} />
+                <Image
+                  alt="arr-image"
+                  src={
+                    showSubMenu === item.label ? gradarrowndown : whitedropdown
+                  }
+                  className="mt-1"
+                />
               </div>
-              <div className="z-50 absolute left-0 top-full w-full ">
-                {openSubMenu[index] && (
+              <div className="absolute left-[20%] top-[250%] w-[35rem]">
+                {showSubMenu === item.label && (
                   <motion.div
+                    // ref={ref}
                     {...framerSidebarBackground}
-                    className="flex flex-col gap-y-4 pt-[2.5rem] pb-[1rem] pl-[1rem] bg-white rounded-lg z-50">
+                    className="p-[2rem] max-h-[24rem] flex flex-wrap gap-y-[2rem] justify-between bg-[#1C2440] border border-[rgba(255,255,255,0.3)] rounded-lg">
                     {item.subMenu.map((menu, subIndex) => (
-                      <p
-                        onClick={() => handleMenuSelection(index, item.label)}
-                        className="cursor-pointer capitalize text-primary font-semibold leading-[1.375] hover:text-slate-900"
+                      <div
+                        onClick={() => handleMenuSelection(item)}
+                        className="w-[45%] text-white flex flex-col gap-y-1 cursor-pointer  transition duration-300 hover:text-[rgba(255,255,255,0.6)]"
                         key={subIndex}>
-                        {menu.label}
-                      </p>
+                        <div className="flex items-center gap-x-2">
+                          {menu.icon && (
+                            <Image
+                              alt="logo-image"
+                              src={menu.icon}
+                              className="w-[1rem]"
+                            />
+                          )}
+                          <p className="text-sm font-semibold ">{menu.label}</p>
+                        </div>
+                        <p className="font-[100] text-xs">{menu.label2}</p>
+                      </div>
                     ))}
                   </motion.div>
                 )}
@@ -104,41 +118,48 @@ export default function Nav() {
         </div>
 
         <div
-          className="z-30 md:hidden transition duration-1000 delay-100 cursor-pointer w-8"
+          className="z-30 md:hidden transition duration-1000 delay-100 cursor-pointer w-7"
           ref={menuButtonRef}
-          onClick={toggleMenu}>
-          <Image alt="menu-image" src={openMenu ? cancel : menu} />
+          onClick={toggleMenuIcon}>
+          <Image alt="menu-image" src={togggleMenuButton ? cancel : menu} />
         </div>
 
         <AnimatePresence mode="wait" initial={false}>
-          {openMenu && (
+          {togggleMenuButton && (
             <motion.div
               ref={ref}
-              className="md:hidden fixed top-0 left-0 z-20 bg-white w-[60%] min-h-screen"
+              className="md:hidden fixed top-0 left-0 z-20 bg-[#1C2440] w-[60%] min-h-screen"
               {...framerSidebarPanel}>
               <div
                 className={`mt-[8rem] ml-[1.2rem] ${
-                  openSubMenu ? " flex flex-col gap-y-6" : ""
+                  togggleMenuButton ? " flex flex-col gap-y-6" : ""
                 }`}>
                 {navLinks.map((item, index) => (
-                  <React.Fragment key={index}>
+                  <div key={index}>
                     <div
-                      onClick={() => toggleSubMenu(index)}
-                      className="flex items-center gap-x-1 font-bold text-normal leading-normal">
+                      onClick={() => toggleMenu(item)}
+                      className={`flex items-center gap-x-1 font-bold text-normal leading-normal ${
+                        showSubMenu === item.label ? "active-tab" : "text-white"
+                      }`}>
                       {item.label}
-                      <Image alt="arr-image" src={arrowndown} />
+                      <Image
+                        alt="arr-image"
+                        src={
+                          showSubMenu === item.label
+                            ? gradarrowndown
+                            : whitedropdown
+                        }
+                      />
                     </div>
                     <AnimatePresence mode="wait" initial={false}>
-                      {openSubMenu[index] && (
+                      {showSubMenu === item.label && (
                         <motion.div
                           {...framerSubMenuPanel}
                           className="flex flex-col gap-y-4">
                           {item.subMenu.map((menu, subIndex) => (
                             <p
-                              onClick={() =>
-                                handleMenuSelection(index, item.label)
-                              }
-                              className="cursor-pointer text-primary font-semibold leading-[1.375] hover:text-slate-900"
+                              onClick={() => handleMenuSelection(item)}
+                              className="cursor-pointer text-white text-sm font-semibold active:text-[rgba(255,255,255,0.6)]"
                               key={subIndex}>
                               {menu.label}
                             </p>
@@ -146,7 +167,7 @@ export default function Nav() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </React.Fragment>
+                  </div>
                 ))}
               </div>
             </motion.div>
