@@ -22,7 +22,7 @@ export default function AuthLayout({
           <Image
             src={loginimg}
             alt="auth-sideimage"
-            className="h-full w-full object-cover"
+            className="min-h-screen w-full object-cover"
           />
           {showChatBot && (
             <div className="z-30 absolute top-[5%] left-[5%] w-[85%]">

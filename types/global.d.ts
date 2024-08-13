@@ -88,12 +88,12 @@ export interface AuthFormData {
 }
 
 export interface InputFieldPropss {
-  label: string;
+  label?: string;
   placeholder: string;
   type?: string;
   fieldname: keyof AuthFormData;
   error?: string;
-  register: UseFormRegister<AuthFormData>;
+  register?: UseFormRegister<AuthFormData>;
 }
 
 export interface DropdownOption {

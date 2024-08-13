@@ -7,12 +7,12 @@ export default function ChatLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="min-h-screen w-full dark:text-white dark:bg-[#141124] flex">
+    <div className="min-h-screen w-full bg-[#110013] flex">
       <div
         style={{
           boxShadow: "0px 17px 40px 4px #7090B01C",
         }}
-        className="w-[20%]">
+        className="w-[18%]">
         <SideBar />
       </div>
       <main className="min-h-screen w-[80%]">{children} </main>

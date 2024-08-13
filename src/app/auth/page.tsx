@@ -165,7 +165,6 @@ export default function AuthPage() {
               gradient="true"
               text={authType === "signup" ? "Sign up" : "Login"}
             />
-
             <div className="w-[15%] mx-auto">
               <div className="w-full flex items-center justify-center ">
                 <div className="flex-1 border-t border-[#7F7F7F]"></div>

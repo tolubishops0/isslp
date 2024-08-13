@@ -18,7 +18,7 @@ export default function Solutions() {
             difference.
           </p>
 
-          <Link href="#">
+          <Link href={"/chat-with-ai"}>
             <div className="z-[1000] rounded-[10rem] mx-auto w-[17rem] md:w-[22rem] h-[3.5rem] flex items-center justify-center gap-x-2 bg-black cursor-pointer active:scale-105 hover:scale-95 transition-all">
               <Image src={andriodbut} alt="andriodbut" className="w-[1.5rem]" />
               <span className="text-sm md:text-[1.25rem] text-white font-semibold leading-[1.375] ">

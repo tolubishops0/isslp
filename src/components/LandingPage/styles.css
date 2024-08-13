@@ -45,7 +45,7 @@
 
 .video-container {
   height: fit-conten;
-  border-radius: 3.2rem;
+  border-radius: 1.31375rem;
   border: double 3px transparent;
   background-image: linear-gradient(#535357, #535357),
     linear-gradient(92.14deg, #db00ff 0%, #5200ff 100%);

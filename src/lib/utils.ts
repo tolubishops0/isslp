@@ -27,6 +27,11 @@ export { default as passclose } from "../../public/assets/passclose.svg";
 export { default as passopen } from "../../public/assets/passwordopen.svg";
 export { default as sparkles } from "../../public/assets/sparles.svg";
 export { default as schedule } from "../../public/assets/schedule.svg";
+export { default as logout } from "../../public/assets/Logout.svg";
+export { default as avatar } from "../../public/assets/avta.svg";
+export { default as settings } from "../../public/assets/settings.svg";
+export { default as ligthnin } from "../../public/assets/ligthnin.svg";
+export { default as arrright } from "../../public/assets/arrright.svg";
 
 import submenuicon1 from "../../public/assets/icon1.svg";
 import submenuicon2 from "../../public/assets/icon2.svg";
@@ -240,15 +245,15 @@ export const socailIcons: StaticImageData[] = [fb, x, yt];
 
 export const heroForm: heroFormProps[] = [
   {
-    label: "UPLOAD YOUR NOTES",
+    label: "I AM A PROFESSIONAL",
     icon: askaqust,
   },
   {
-    label: "RECORD YOUR CLASS",
+    label: "I AM A STUDENT",
     icon: convertformat,
   },
   {
-    label: "Convert Formart",
+    label: "I AM A TEST TAKER",
     icon: sumarize,
   },
 ];
