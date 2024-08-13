@@ -5,7 +5,7 @@ import {
   smilignpe,
   hero4sectionPropss,
   sevenpad,
-} from "../../../lib/utils";
+} from "../../lib/utils";
 
 export default function Solutions() {
   return (

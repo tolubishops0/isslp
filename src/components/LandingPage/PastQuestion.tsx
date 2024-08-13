@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { hero5section, goldstart } from "../../../lib/utils";
+import { hero5section, goldstart } from "../../lib/utils";
 
 export default function PastQuestion() {
   return (
