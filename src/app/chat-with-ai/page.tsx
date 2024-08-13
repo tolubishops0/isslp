@@ -6,7 +6,7 @@ import { avatar, ligthnin, arrright } from "@/lib/utils";
 import GradientButton from "@/components/commonComp/GradientBorderButton";
 import Button from "@/components/commonComp/Button";
 
-export default function page() {
+export default function ChatWithAI() {
   const router = useRouter()
   return (
     <main className="relative h-[92%] w-[90%] my-[2rem] mx-auto">

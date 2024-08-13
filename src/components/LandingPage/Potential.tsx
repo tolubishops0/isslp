@@ -45,7 +45,7 @@ export default function Potential() {
             Unlock Your Potential with Intelligent Scholar
           </h1>
           <p className="text-[#FFFDFD] font-light text-base md:text-lg text-center mt-4">
-            From research to exams, we've got you covered. Our comprehensive
+            From research to exams, weve got you covered. Our comprehensive
             services are designed to assist students at every stage of their
             academic journey.
           </p>
