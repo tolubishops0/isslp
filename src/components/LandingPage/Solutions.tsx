@@ -13,9 +13,9 @@ export default function Solutions() {
             Get help with Intelligent Scholar AI
           </h1>
           <p className="text-[#FFFDFD] font-extralight text-sm text-center">
-            Dont struggle alone. Intelligent Scholar AI is here to assist you.
-            Experience the power of AI-driven learning. Try it now and see the
-            difference.
+            Don&apos;t struggle alone. Intelligent Scholar AI is here to assist
+            you. Experience the power of AI-driven learning. Try it now and see
+            the difference.
           </p>
 
           <Link href={"/chat-with-ai"}>
