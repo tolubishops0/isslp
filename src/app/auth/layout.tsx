@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { loginimg } from "@/lib/utils";
 import { ProfileContext } from "./ProfileContext";
 import ChatBot from "./ChatBot";
+import Loader from "@/components/commonComp/Loader";
 
 export default function AuthLayout({
   children,
@@ -13,7 +14,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const showChatBot= pathname === "/auth/select-country" ||  pathname === "/auth/todo";
+  const showChatBot =
+    pathname === "/auth/select-country" || pathname === "/auth/todo";
 
   return (
     <ProfileContext>
@@ -30,7 +32,11 @@ export default function AuthLayout({
             </div>
           )}
         </div>
-        <main className="w-[90%] mx-auto md:w-[75%] lg:w-1/2">{children}</main>
+        <Suspense fallback={<Loader />}>
+          <main className="w-[90%] mx-auto md:w-[75%] lg:w-1/2">
+            {children}
+          </main>
+        </Suspense>
       </div>
     </ProfileContext>
   );
