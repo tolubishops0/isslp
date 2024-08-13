@@ -25,6 +25,8 @@ export { default as loginimg } from "../../public/assets/loginimg.svg";
 export { default as googlebutton } from "../../public/assets/googlebutton.svg";
 export { default as passclose } from "../../public/assets/passclose.svg";
 export { default as passopen } from "../../public/assets/passwordopen.svg";
+export { default as sparkles } from "../../public/assets/sparles.svg";
+export { default as schedule } from "../../public/assets/schedule.svg";
 
 import submenuicon1 from "../../public/assets/icon1.svg";
 import submenuicon2 from "../../public/assets/icon2.svg";
