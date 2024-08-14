@@ -4,15 +4,19 @@ import Potential from "./Potential";
 import Solutions from "./Solutions";
 import PastQuestion from "./PastQuestion";
 import VideoSection from "./VideoSection";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Index() {
   return (
-    <div>
+    <main className="bg-[#110013]">
+      <Nav />
       <Hero />
-      <Potential />
       <VideoSection />
-      <Solutions />
+      <Potential />
       <PastQuestion />
-    </div>
+      <Solutions />
+      <Footer />
+    </main>
   );
 }

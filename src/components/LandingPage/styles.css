@@ -1,0 +1,156 @@
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 4.75rem;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  border-top: double 2px transparent;
+  border-bottom: double 2px transparent;
+  border-right: 0;
+  border-left: 0;
+  background-image: linear-gradient(#535357, #535357),
+    linear-gradient(92.14deg, #db00ff 0%, #5200ff 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.chat-bubble {
+  box-shadow: -4px 4px 0px 0px rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, #8661ae 0%, #420c7c 100%);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.8rem;
+  width: 13.4825rem;
+  padding: 0 1rem;
+  height: 5.189375rem;
+  @media (max-width: 640px) {
+    height: 4rem;
+    width: 12rem;
+  }
+}
+
+.video-container {
+  height: fit-conten;
+  border-radius: 1.31375rem;
+  border: double 3px transparent;
+  background-image: linear-gradient(#535357, #535357),
+    linear-gradient(92.14deg, #db00ff 0%, #5200ff 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  @media (max-width: 640px) {
+    border-radius: 1rem;
+  }
+}
+
+.play-button {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  border: double 3px transparent;
+  background-image: linear-gradient(#535357, #535357),
+    linear-gradient(92.14deg, #db00ff 0%, #5200ff 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  @media (max-width: 640px) {
+    width: 20%;
+  }
+}
+
+.card-border {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 21.5rem;
+  width: 22%;
+  padding: 1.5rem 1rem;
+  border-radius: 0px 0px 0.75rem 0.75rem;
+  border-top: double 3px transparent;
+  border-bottom: double 1px rgba(27, 23, 36, 0.8);
+  border-right: double 1px rgba(27, 23, 36, 0.8);
+  border-left: double 1px rgba(27, 23, 36, 0.8);
+  background-image: linear-gradient(#1b1724, #1b1724),
+    linear-gradient(90.44deg, #f3abff 0.18%, #8044ff 82%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  @media (max-width: 1200px) {
+    width: 45%;
+    height: 32rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 45%;
+    height: 21.5rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 95%;
+    height: 38.5rem;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
+    height: 30.5rem;
+  }
+  @media (max-width: 400px) {
+    width: 95%;
+    height: 20.5rem;
+  }
+}
+
+.past_q {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  row-gap: 0.5rem;
+  height: 7rem;
+  width: 31%;
+  padding-left: 1rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  border-bottom: double 3px transparent;
+  border-top: double 1px rgba(27, 23, 36, 0.8);
+  border-right: double 1px rgba(27, 23, 36, 0.8);
+  border-left: double 1px rgba(27, 23, 36, 0.8);
+  /* border-left: double 1px rgb(39, 39, 39); */
+  background-image: linear-gradient(#1b1724, #1b1724),
+    linear-gradient(90.44deg, #f3abff 0.18%, #8044ff 82%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  @media (max-width: 1024px) {
+    width: 45%;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.solution-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20.375rem;
+  background-image: linear-gradient(
+    219.42deg,
+    #c7608c 2.3%,
+    #ab54ab 55.69%,
+    #7f42da 89.86%
+  );
+  border-radius: 0.75rem;
+}

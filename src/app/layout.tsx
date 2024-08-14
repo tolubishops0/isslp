@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
-import Footer from "@/components/Footer/Footer";
+import StyledComponentsRegistry from "@/lib/registry";
 
-const inter = Sora({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Intelligent Scholar",
@@ -18,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        {children}
-        <Footer />
+      <body className={sora.className}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
