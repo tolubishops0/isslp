@@ -44,6 +44,7 @@ export default function Nav() {
   const handleMenuSelection = (item: NavLink) => {
     setTogggleMenuButton(false);
     setShowSubMenu("");
+    console.log("clicked");
   };
 
   return (
@@ -53,12 +54,11 @@ export default function Nav() {
           <Image alt="logo-image" src={logo} />
         </div>
 
-        <div className="z-[1000] hidden w-fit md:flex gap-x-4 xl:gap-x-8 relatve">
+        <div
+          ref={ref}
+          className="z-[1000] hidden w-fit md:flex gap-x-4 xl:gap-x-8 relatve">
           {navLinks.map((item, index) => (
-            <div
-              // ref={ref}
-              key={index}
-              className="relative ">
+            <div key={index} className="relative ">
               <div
                 onClick={() => toggleMenu(item)}
                 className={`cursor-pointer flex items-center gap-x-1 font-bold text-normal leading-normal transition duration-300 hover:text-[rgba(255,255,255,0.9)] ${
@@ -76,7 +76,6 @@ export default function Nav() {
               <div className="absolute left-[20%] top-[250%] w-[35rem]">
                 {showSubMenu === item.label && (
                   <motion.div
-                    // ref={ref}
                     {...framerSidebarBackground}
                     className="p-[2rem] max-h-[24rem] flex flex-wrap gap-y-[2rem] justify-between bg-[#1C2440] border border-[rgba(255,255,255,0.3)] rounded-lg">
                     {item.subMenu.map((menu, subIndex) => (

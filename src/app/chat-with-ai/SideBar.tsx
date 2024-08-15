@@ -36,10 +36,10 @@ export default function SideBar() {
           <History />
         </div>
       </div>
-      <div className="absolute bottom-[3%] w-[14rem] px-4">
+      <div className="absolute bottom-[5%] w-[14rem] px-4">
         <Link href="#" className="flex items-center gap-x-2">
           <Image src={settings} alt="auth-sideimage" className="w-5" />
-          <span className="font-normal hover:text-[#acb5ca] transition duration-300 ease-in">
+          <span className="font-normal text-white hover:text-[#acb5ca] transition duration-300 ease-in">
             Settings
           </span>
         </Link>
@@ -73,7 +73,6 @@ const History = () => {
   };
   return (
     <div className="">
-     
       <div
         style={{
           overflowY: "scroll",
@@ -82,7 +81,7 @@ const History = () => {
           // msOverflowX: "none",
         }}
         className=" ">
-        <div className=" flex flex-col">
+        <div className="flex flex-col">
           {historylink.map((item) => (
             <Link
               key={item.title}
