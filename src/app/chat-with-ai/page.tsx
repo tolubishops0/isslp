@@ -90,7 +90,7 @@ export default function ChatWithAI() {
               height: "calc(100vh - 10rem)",
               scrollbarWidth: "none",
             }}
-            className="z-10 flex-col h-full overflow-auto py-[2rem] px-4">
+            className="z-10 flex flex-col gap-y-[1.5rem] h-full overflow-auto py-[2rem] px-4">
             <div className="bg-[#3B3E5D] text-white p-3 w-fit h-[3rem] rounded-md ">
               <TypeAnimation
                 sequence={["Hello there, how can i help you today?"]}
@@ -102,7 +102,7 @@ export default function ChatWithAI() {
             </div>
             {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et maiores molestiae dolores. Quia similique quo fugit hic totam tempora quibusdam dicta cumque sit, voluptates aperiam doloribus ex sunt mollitia minima. */}
 
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-y-[1.5rem]">
               {messages.map((item) => (
                 <div
                   className={`bg-[#3B3E5D] text-white p-3 rounded-md mb-2  max-w-[20rem] ${
