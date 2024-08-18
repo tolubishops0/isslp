@@ -23,10 +23,6 @@ export interface SubMenuItem {
   icon?: StaticImageData;
 }
 
-export interface NavLinkProps {
-  label: string;
-}
-
 export interface heroFormProps {
   label: string;
   icon: StaticImageData;
@@ -99,10 +95,4 @@ export interface InputFieldPropss {
 export interface DropdownOption {
   option: string;
   icon?: StaticImageData;
-}
-
-export interface DropdownProps {
-  options: DropdownOption[];
-  placeholder: string;
-  getValue: (value: DropdownOption) => void;
 }

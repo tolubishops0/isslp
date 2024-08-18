@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 
 import {
   NavLink,
@@ -6,9 +5,7 @@ import {
   hero2SectionProps,
   hero3SectionProps,
   hero6formProps,
-  NavLinkProps,
   SubMenuItem,
-  DropdownProps,
   DropdownOption,
 } from "../../types/global";
 
@@ -17,7 +14,6 @@ import {
 export { default as menu } from "../../public/assets/icons8-menu-24.png";
 export { default as cancel } from "../../public/assets/icons8-cancel-30.png";
 export { default as logo } from "../../public/assets/is logo 2.svg";
-export { default as arrowndown } from "../../public/assets/arrowndown.svg";
 export { default as gradarrowndown } from "../../public/assets/gradientdropdown.svg";
 export { default as stressedguy } from "../../public/assets/stressedguy.svg";
 export { default as play } from "../../public/assets/play.svg";
@@ -167,20 +163,11 @@ export const navLinks: NavLink[] = [
 //HERO SECTION
 export { default as meshbg } from "../../public/assets/meshbg.svg";
 export { default as search } from "../../public/assets/search item.svg";
-export { default as help } from "../../public/assets/help.svg";
 export { default as lefttwireframe } from "../../public/assets/lefttwireframe.svg";
 export { default as rightwireframe } from "../../public/assets/rightwireframe.svg";
-export { default as rightyellowstar } from "../../public/assets/rightyellowstar.svg";
-export { default as leftbluestart } from "../../public/assets/leftbluestart.svg";
-export { default as intelstar } from "../../public/assets/intelstar.svg";
-export { default as bluerightframe } from "../../public/assets/bluerightframe.svg";
-export { default as yellowsmstart } from "../../public/assets/yellowsmstart.svg";
 export { default as pinkblur } from "../../public/assets/pinkblur.svg";
 export { default as rightsrart } from "../../public/assets/rightsrart.svg";
 export { default as leftstart } from "../../public/assets/leftstart.svg";
-export { default as smilignpe } from "../../public/assets/smilignpe.svg";
-export { default as greenstar } from "../../public/assets/greenstar.svg";
-export { default as sevenpad } from "../../public/assets/sevenpad.svg";
 export { default as goldstart } from "../../public/assets/goldstart.svg";
 export { default as chatbubble } from "../../public/assets/chatbubble.svg";
 export { default as whitedropdown } from "../../public/assets/whitedropdown.svg";
@@ -195,30 +182,10 @@ export { default as chatboxnobg } from "../../public/assets/chatboxnobg.svg";
 export { default as chatboxwithbg } from "../../public/assets/chatboxwithbg.svg";
 export { default as loader } from "../../public/assets/loader.svg";
 
-import fbicn from "../../public/assets/fbicn.svg";
-import xicn from "../../public/assets/xicn.svg";
-import igicn from "../../public/assets/igicn.svg";
-import linkicn from "../../public/assets/linkicn.svg";
-
-import subjetcstart from "../../public/assets/subjetcstart.svg";
-import hero2c from "../../public/assets/hero2c.svg";
-import hero2a from "../../public/assets/hero2a.svg";
-import hero2b from "../../public/assets/hero2b.svg";
-import hero2d from "../../public/assets/hero2d.svg";
-import hero2e from "../../public/assets/hero2e.svg";
-import hero2f from "../../public/assets/hero2f.svg";
-import hero2g from "../../public/assets/hero2g.svg";
-import hero2h from "../../public/assets/hero2h.svg";
-
 import sol1 from "../../public/assets/sol1.svg";
 import sol2 from "../../public/assets/sol2.svg";
 import sol3 from "../../public/assets/sol3.svg";
 
-import firstpad from "../../public/assets/firstpad.svg";
-import secpad from "../../public/assets/secpad.svg";
-import thirdpad from "../../public/assets/thirdpad.svg";
-import sixthpad from "../../public/assets/sixthpad.svg";
-import sevenpad from "../../public/assets/sevenpad.svg";
 
 import askaqust from "../../public/assets/ph_suitcase-bold.svg";
 import convertformat from "../../public/assets/ph_student-bold.svg";
@@ -240,8 +207,6 @@ import fb from "../../public/assets/fb.svg";
 import x from "../../public/assets/x.svg";
 import yt from "../../public/assets/yt.svg";
 import nigeria from "../../public/assets/nigeria.svg";
-
-export const socailIcons: StaticImageData[] = [fb, x, yt];
 
 export const heroForm: heroFormProps[] = [
   {
@@ -394,23 +359,20 @@ export const hero5section: hero6formProps[] = [
   },
 ];
 
-export const socialIcon: heroFormProps[] = [
+export const socialIcons: heroFormProps[] = [
   {
     label: "facebook",
-    icon: fbicn,
+    icon: fb,
   },
   {
-    label: "facebook",
-    icon: igicn,
+    label: "x",
+    icon: x,
   },
   {
-    label: "facebook",
-    icon: linkicn,
+    label: "yt",
+    icon: yt,
   },
-  {
-    label: "facebook",
-    icon: xicn,
-  },
+
 ];
 
 export const footerLinksStudets: SubMenuItem[] = [

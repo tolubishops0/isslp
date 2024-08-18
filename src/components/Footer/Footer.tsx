@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   logo,
-  socailIcons,
+  socialIcons,
   footerLinksProf,
   footerLinksStudets,
   footerLinksTest,
@@ -20,13 +20,13 @@ export default function Footer() {
         </p>
         <div>
           <div className="flex gap-x-3">
-            {socailIcons.map((item, index) => (
-              <Image
-                key={index}
-                src={item}
-                alt="logo"
+            {socialIcons.map((item) => (
+              <Link
+                href={item.label}
                 className="hover:scale-110 transition duration-300 cursor-pointer"
-              />
+                key={item.label}>
+                <Image src={item.icon} alt="logo" />
+              </Link>
             ))}
           </div>
           <p className="mt-3 font-extralight leading-normal font-sans text-[0.75rem] text-white">
