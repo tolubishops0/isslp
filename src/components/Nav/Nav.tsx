@@ -5,7 +5,6 @@ import {
   menu,
   cancel,
   navLinks,
-  arrowndown,
   whitedropdown,
   gradarrowndown,
 } from "../../lib/utils";
@@ -16,6 +15,7 @@ import { useClickAway } from "react-use";
 import Button from "../commonComp/Button";
 import GradientButton from "../commonComp/GradientBorderButton";
 import { NavLink } from "../../../types/global";
+import "./styles.css";
 
 export default function Nav() {
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function Nav() {
   const handleMenuSelection = (item: NavLink) => {
     setTogggleMenuButton(false);
     setShowSubMenu("");
-    console.log("clicked");
+    console.log("here clicked ");
   };
 
   return (
@@ -61,9 +61,9 @@ export default function Nav() {
             <div key={index} className="relative ">
               <div
                 onClick={() => toggleMenu(item)}
-                className={`cursor-pointer flex items-center gap-x-1 font-bold text-normal leading-normal transition duration-300 hover:text-[rgba(255,255,255,0.9)] ${
+                className={`cursor-pointer flex items-center gap-x-1 font-bold text-normal leading-normal hover:text-[rgba(255,255,255,0.9)] ${
                   showSubMenu === item.label ? "active-tab" : "text-white"
-                } `}>
+                }`}>
                 {item.label}
                 <Image
                   alt="arr-image"
@@ -73,15 +73,16 @@ export default function Nav() {
                   className="mt-1"
                 />
               </div>
-              <div className="absolute left-[20%] top-[250%] w-[35rem]">
+              <div
+                className={`absolute left-[20%] top-[250%] w-[35rem] submenu ${
+                  showSubMenu === item.label ? "visible" : ""
+                }`}>
                 {showSubMenu === item.label && (
-                  <motion.div
-                    {...framerSidebarBackground}
-                    className="p-[2rem] max-h-[24rem] flex flex-wrap gap-y-[2rem] justify-between bg-[#1C2440] border border-[rgba(255,255,255,0.3)] rounded-lg">
+                  <div className="p-[2rem] max-h-[24rem] flex flex-wrap gap-y-[2rem] justify-between bg-[#1C2440] border border-[rgba(255,255,255,0.3)] rounded-lg">
                     {item.subMenu.map((menu, subIndex) => (
                       <div
                         onClick={() => handleMenuSelection(item)}
-                        className="w-[45%] text-white flex flex-col gap-y-1 cursor-pointer  transition duration-300 hover:text-[rgba(255,255,255,0.6)]"
+                        className="w-[45%] text-white flex flex-col gap-y-1 cursor-pointer transition duration-300 hover:text-[rgba(255,255,255,0.6)]"
                         key={subIndex}>
                         <div className="flex items-center gap-x-2">
                           {menu.icon && (
@@ -96,7 +97,7 @@ export default function Nav() {
                         <p className="font-[100] text-xs">{menu.label2}</p>
                       </div>
                     ))}
-                  </motion.div>
+                  </div>
                 )}
               </div>
             </div>
@@ -105,12 +106,12 @@ export default function Nav() {
 
         <div className="z-[1000] hidden md:flex items-center gap-x-4">
           <div
-            onClick={() => router.push("/auth?type=login")}
+            // onClick={() => router.push("/auth?type=login")}
             className="w-[9rem]">
             <GradientButton text="Login" />
           </div>
           <div
-            onClick={() => router.push("/auth?type=signup")}
+            // onClick={() => router.push("/auth?type=signup")}
             className="w-[9rem]">
             <Button gradient="true" text="Sign up" />
           </div>

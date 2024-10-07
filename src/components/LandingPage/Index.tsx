@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 
 export default function Index() {
   return (
-    <main className="bg-[#110013]">
+    <main className="bg-[#090E2F]">
       <Nav />
       <Hero />
       <VideoSection />
