@@ -57,7 +57,7 @@ export default function ChatWithAI() {
   }, [aiMessage]);
 
   return (
-    <main className="relative min-h-screen w-[90%] mt-[1rem mx-auto">
+    <main className="relative min-h-screen w-[90%] mx-auto">
       <div className="relative flex flex-col h-full">
         <div className="z-0 absolute inset-0 flex justify-center items-center">
           <Image src={ligthnin} alt="auth-sideimage" className="" />

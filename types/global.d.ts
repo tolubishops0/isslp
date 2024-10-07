@@ -96,3 +96,10 @@ export interface DropdownOption {
   option: string;
   icon?: StaticImageData;
 }
+
+export interface DropdownProps {
+  type: string;
+  options: DropdownOption[];
+  placeholder: string;
+  getValue: (value: DropdownOption) => void;
+}
