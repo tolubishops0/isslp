@@ -44,7 +44,6 @@ export default function Nav() {
   const handleMenuSelection = (item: NavLink) => {
     setTogggleMenuButton(false);
     setShowSubMenu("");
-    console.log("here clicked ");
   };
 
   return (
@@ -105,15 +104,21 @@ export default function Nav() {
         </div>
 
         <div className="z-[1000] hidden md:flex items-center gap-x-4">
-          <div
-            // onClick={() => router.push("/auth?type=login")}
-            className="w-[9rem]">
-            <GradientButton text="Login" />
+          <div className="w-[9rem]">
+            <a
+              href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
+              target="_blank"
+              rel="noopener noreferrer">
+              <GradientButton text="Login" />
+            </a>
           </div>
-          <div
-            // onClick={() => router.push("/auth?type=signup")}
-            className="w-[9rem]">
-            <Button gradient="true" text="Sign up" />
+          <div className="w-[9rem]">
+            <a
+              href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button gradient="true" text="Sign up" />
+            </a>
           </div>
         </div>
 
