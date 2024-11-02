@@ -135,45 +135,68 @@ export default function Nav() {
               ref={ref}
               className="md:hidden fixed top-0 left-0 z-20 bg-[#1C2440] w-[60%] min-h-screen"
               {...framerSidebarPanel}>
-              <div
-                className={`mt-[8rem] ml-[1.2rem] ${
-                  togggleMenuButton ? " flex flex-col gap-y-6" : ""
-                }`}>
-                {navLinks.map((item, index) => (
-                  <div key={index}>
-                    <div
-                      onClick={() => toggleMenu(item)}
-                      className={`flex items-center gap-x-1 font-bold text-normal leading-normal ${
-                        showSubMenu === item.label ? "active-tab" : "text-white"
-                      }`}>
-                      {item.label}
-                      <Image
-                        alt="arr-image"
-                        src={
+              <div className="h-screen flex flex-col justify-between pb-[5rem]">
+                <div
+                  className={`mt-[8rem] ml-[1.2rem] ${
+                    togggleMenuButton ? " flex flex-col gap-y-[2rem]" : ""
+                  }`}>
+                  {navLinks.map((item, index) => (
+                    <div key={index}>
+                      <div
+                        onClick={() => toggleMenu(item)}
+                        className={`flex items-center gap-x-1 font-bold text-normal leading-normal ${
                           showSubMenu === item.label
-                            ? gradarrowndown
-                            : whitedropdown
-                        }
-                      />
+                            ? "active-tab"
+                            : "text-white"
+                        }`}>
+                        {item.label}
+                        <Image
+                          alt="arr-image"
+                          src={
+                            showSubMenu === item.label
+                              ? gradarrowndown
+                              : whitedropdown
+                          }
+                        />
+                      </div>
+                      <AnimatePresence mode="wait" initial={false}>
+                        {showSubMenu === item.label && (
+                          <motion.div
+                            {...framerSubMenuPanel}
+                            className="flex flex-col gap-y-4">
+                            {item.subMenu.map((menu, subIndex) => (
+                              <p
+                                onClick={() => handleMenuSelection(item)}
+                                className="cursor-pointer text-white text-sm font-semibold active:text-[rgba(255,255,255,0.6)]"
+                                key={subIndex}>
+                                {menu.label}
+                              </p>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
-                    <AnimatePresence mode="wait" initial={false}>
-                      {showSubMenu === item.label && (
-                        <motion.div
-                          {...framerSubMenuPanel}
-                          className="flex flex-col gap-y-4">
-                          {item.subMenu.map((menu, subIndex) => (
-                            <p
-                              onClick={() => handleMenuSelection(item)}
-                              className="cursor-pointer text-white text-sm font-semibold active:text-[rgba(255,255,255,0.6)]"
-                              key={subIndex}>
-                              {menu.label}
-                            </p>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                  ))}
+                </div>
+
+                <div className="px-5 ">
+                  <div className="w-full">
+                    <a
+                      href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <GradientButton text="Login" />
+                    </a>
                   </div>
-                ))}
+                  <div className="w-full mt-4">
+                    <a
+                      href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <Button gradient="true" text="Sign up" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}
