@@ -25,7 +25,7 @@ export default function ChatWithAI() {
     id: Math.random() + -0.5,
   };
 
-  const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const getInputValue = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     e.preventDefault();
     setInputValue(e.target.value);
   };
@@ -97,7 +97,7 @@ export default function ChatWithAI() {
               scrollbarWidth: "none",
             }}
             className="z-10 flex flex-col gap-y-[1.5rem] h-full overflow-auto py-[2rem] px-4">
-            <div className="bg-[#3B3E5D] text-white p-3 w-fit h-[3rem] rounded-md ">
+            <div className="bg-[#3B3E5D] text-white p-3 w-fit h-fit lg:h-[3rem] rounded-md ">
               <TypeAnimation
                 sequence={["Hello there, how can i help you today?"]}
                 wrapper="span"
@@ -133,18 +133,19 @@ export default function ChatWithAI() {
           </div>
         </div>
 
-        <div className="sticky bottom-[-5%] w-full ">
+        <div className="sticky bottom-[-5%]  w-full ">
           <form
             onSubmit={(e) => submitMessage(e)}
             className="w-full mx-auto flex item-center h-[3.5rem] gap-x-4">
-            <input
+            <textarea
               value={inputValue}
-              className="w-[90%] text-[1rem] text-white border border-[#413A61] rounded-[6px] bg-[#2B2549] pl-[1rem] placeholder:text-[#98a2b3] placeholder:font-normal placeholder:text-[0.85rem]"
-              placeholder="Send a message"
+              className="w-[80%] lg:w-[90%] text-[1rem] text-white border border-[#413A61] rounded-[6px] bg-[#2B2549] pl-[1rem] placeholder:text-[#98a2b3] placeholder:font-normal placeholder:text-[0.85rem]"
+              // placeholder="Send a message"
               onChange={getInputValue}
-            />
+            >
+            </textarea>
             <button
-              className={`flex items-center justify-center w-[10%] bg-[#2B2549] border border-[#413A61] rounded-[6px] h-full transition duration-300 ease-in  cursor-pointer
+              className={`flex items-center justify-center w-[20%] lg:w-[10%] bg-[#2B2549] border border-[#413A61] rounded-[6px] h-full transition duration-300 ease-in  cursor-pointer
                `}>
               <Image src={arrright} alt="auth-sideimage" className="" />
             </button>

@@ -8,14 +8,14 @@ export default function ChatLayout({
 }>) {
   return (
     <div className="min-h-screen w-full bg-[#141124] flex">
-      <div
+      {/* <div
         style={{
           boxShadow: "0px 17px 40px 4px #7090B01C",
         }}
         className="w-[260px] h-full flex-shrink-0">
         <SideBar />
-      </div>
-      <main className="min-h-screen w-full">{children} </main>
+      </div> */}
+      <main className="min-h~-screen w-full">{children} </main>
     </div>
   );
 }
