@@ -251,7 +251,7 @@ export default function ChatWithAI() {
             {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et maiores molestiae dolores. Quia similique quo fugit hic totam tempora quibusdam dicta cumque sit, voluptates aperiam doloribus ex sunt mollitia minima. */}
 
             <div className="flex flex-col gap-y-[1.5rem]">
-              {messages.map((item) => (
+              {messages?.map((item) => (
                 <div
                   className={`bg-[#3B3E5D] text-white p-3 rounded-md mb-2 max-w-[20rem] ${
                     item.sender === "user" ? "self-end" : "self-start"

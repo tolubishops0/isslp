@@ -15,7 +15,7 @@ import { useClickAway } from "react-use";
 import Button from "../commonComp/Button";
 import GradientButton from "../commonComp/GradientBorderButton";
 import { NavLink } from "../../../types/global";
-import "./styles.css";
+// import "./styles.css";
 
 export default function Nav() {
   const router = useRouter();
@@ -106,7 +106,8 @@ export default function Nav() {
         <div className="z-[1000] hidden md:flex items-center gap-x-4">
           <div className="w-[9rem]">
             <a
-              href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
+              href="#"
+              // href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
               target="_blank"
               rel="noopener noreferrer">
               <GradientButton text="Login" />
@@ -114,7 +115,8 @@ export default function Nav() {
           </div>
           <div className="w-[9rem]">
             <a
-              href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
+              href="#"
+              // href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
               target="_blank"
               rel="noopener noreferrer">
               <Button gradient="true" text="Sign up" />
@@ -182,7 +184,8 @@ export default function Nav() {
                 <div className="px-5 ">
                   <div className="w-full">
                     <a
-                      href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
+                      href="#"
+                      // href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
                       target="_blank"
                       rel="noopener noreferrer">
                       <GradientButton text="Login" />
@@ -190,7 +193,8 @@ export default function Nav() {
                   </div>
                   <div className="w-full mt-4">
                     <a
-                      href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
+                      href="#"
+                      // href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
                       target="_blank"
                       rel="noopener noreferrer">
                       <Button gradient="true" text="Sign up" />
