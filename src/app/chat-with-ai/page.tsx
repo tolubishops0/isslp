@@ -114,17 +114,19 @@ export default function ChatWithAI() {
             <div className="hidden md:flex items-center gap-x-4">
               <div className="w-[9rem]">
                 <a
-                  href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                  href="#"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
+                >
                   <GradientButton text="Login" />
                 </a>
               </div>
               <div className="w-[9rem]">
                 <a
-                  href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                  href="#"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
+                >
                   <Button gradient="true" text="Sign up" />
                 </a>
               </div>
@@ -191,17 +193,19 @@ export default function ChatWithAI() {
                     <div className="px-5 ">
                       <div className="w-full">
                         <a
-                          href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
-                          target="_blank"
-                          rel="noopener noreferrer">
+                          href="#"
+                          // target="_blank"
+                          // rel="noopener noreferrer"
+                        >
                           <GradientButton text="Login" />
                         </a>
                       </div>
                       <div className="w-full mt-4">
                         <a
-                          href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
-                          target="_blank"
-                          rel="noopener noreferrer">
+                          href="#"
+                          // target="_blank"
+                          // rel="noopener noreferrer"
+                        >
                           <Button gradient="true" text="Sign up" />
                         </a>
                       </div>
@@ -210,17 +214,19 @@ export default function ChatWithAI() {
                   <div className=" hidden md:flex items-center gap-x-4">
                     <div className="w-[9rem]">
                       <a
-                        href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                        href="#"
+                        // target="_blank"
+                        // rel="noopener noreferrer"
+                      >
                         <GradientButton text="Login" />
                       </a>
                     </div>
                     <div className="w-[9rem]">
                       <a
-                        href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                        href="#"
+                        // target="_blank"
+                        // rel="noopener noreferrer"
+                      >
                         <Button gradient="true" text="Sign up" />
                       </a>
                     </div>

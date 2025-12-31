@@ -108,8 +108,9 @@ export default function Nav() {
             <a
               href="#"
               // href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
-              target="_blank"
-              rel="noopener noreferrer">
+              // target="_blank"
+              // rel="noopener noreferrer"
+            >
               <GradientButton text="Login" />
             </a>
           </div>
@@ -117,8 +118,9 @@ export default function Nav() {
             <a
               href="#"
               // href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
-              target="_blank"
-              rel="noopener noreferrer">
+              // target="_blank"
+              // rel="noopener noreferrer"
+            >
               <Button gradient="true" text="Sign up" />
             </a>
           </div>
@@ -186,8 +188,9 @@ export default function Nav() {
                     <a
                       href="#"
                       // href="https://intelligentscholar-app-dev.qudra.io/auth?type=login"
-                      target="_blank"
-                      rel="noopener noreferrer">
+                      // target="_blank"
+                      // rel="noopener noreferrer"
+                    >
                       <GradientButton text="Login" />
                     </a>
                   </div>
@@ -195,8 +198,9 @@ export default function Nav() {
                     <a
                       href="#"
                       // href="https://intelligentscholar-app-dev.qudra.io/auth?type=signup"
-                      target="_blank"
-                      rel="noopener noreferrer">
+                      // target="_blank"
+                      // rel="noopener noreferrer"
+                    >
                       <Button gradient="true" text="Sign up" />
                     </a>
                   </div>
