@@ -99,8 +99,10 @@ export default function ChatWithAI() {
   return (
     <main className="relative h-screen w-[90%] mx-auto">
       <div className="relative flex flex-col h-full">
-        <div className="z-0 absolute inset-0 flex justify-center items-center">
-          <Image src={ligthnin} alt="auth-sideimage" className="" />
+        <div
+          onClick={() => router.push("/")}
+          className="z-0 absolute inset-0 flex justify-center items-center">
+          <Image src={ligthnin} alt="auth-sideimage" />
         </div>
         <div className="sticky h-[5rem] top-[3%] w-full z-[50]">
           <div className="flex justify-between items-center">

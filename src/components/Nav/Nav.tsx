@@ -47,7 +47,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="w-[90%] mx-auto">
+    <nav className="w-[90%] max-w-[1400px] mx-auto">
       <div className="h-[6rem] flex items-center justify-between">
         <div className="z-30 w-[50%] md:w-fit">
           <Image alt="logo-image" src={logo} />

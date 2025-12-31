@@ -20,12 +20,12 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <main className="relative flex items-start justify-center">
-      <div className="relative w-[90%] mx-auto flex flex-col justify-center items-center mt-[4rem] mb-[10rem] xl:mt-[8rem] xl:mb-[16rem]">
+      <div className="relative w-[90%] max-w-[1400px] mx-auto flex flex-col justify-center items-center mt-[4rem] mb-[10rem] xl:mt-[8rem] xl:mb-[16rem]">
         <div className="z-10 relative w-full xl:w-[70%] flex flex-col items-center justify-center gap-y-[0.5rem] text-left xl:text-center">
           <h1 className="font-bold text-[#FDFBFB] text-2xl leading-[2] md:leading-[1.2] md:text-5xl xl:text-[3.25rem]">
             Study with AI. Transform your Learning
           </h1>
-          <h2 className="w-[full] xl:w-[80%] text-left xl:text-center text-[#D7D4D9] font-normal text-base">
+          <h2 className="w-full xl:w-[80%] text-left xl:text-center text-[#D7D4D9] font-normal text-base">
             Unlock your potential with personalized study tools. Study 10x
             faster, become 10x better, and ace your exams.
           </h2>

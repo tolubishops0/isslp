@@ -4,42 +4,9 @@ import { hero2Section } from "../../lib/utils";
 import "./styles.css";
 
 export default function Potential() {
-  const iconPositon = (index: number, icon: StaticImageData) => {
-    let positionStyles: React.CSSProperties;
-
-    switch (index) {
-      case 0:
-        positionStyles = { top: "-5%", left: "-8%", width: "4rem" };
-        break;
-      case 1:
-        positionStyles = { bottom: "2%", right: "12%", width: "2rem" };
-        break;
-      case 2:
-        positionStyles = { top: "4%", left: "7%", width: "2.5rem" };
-        break;
-      case 5:
-        positionStyles = { bottom: "-1%", right: "20%", width: "2.5rem" };
-        break;
-      case 6:
-        positionStyles = { bottom: "0%", right: "5%", width: "3.4rem" };
-        break;
-      default:
-        positionStyles = { top: "0", left: "0" };
-        break;
-    }
-
-    return (
-      <Image
-        src={icon}
-        alt="image"
-        style={{ ...positionStyles, position: "absolute" }}
-      />
-    );
-  };
-
   return (
     <div className="bg-inherit">
-      <div className="w-[90%] py-[1rem] md:py-[3rem] mx-auto flex flex-col gap-y-[3rem]">
+      <div className="w-[90%] max-w-[1400px] py-[1rem] md:py-[3rem] mx-auto flex flex-col gap-y-[3rem]">
         <div className="w-full md:w-[65%] mx-auto">
           <h1 className="font-semibold text-lg sm:text-2xl md:text-3xl xl:text-[2rem] text-white xl:leading-[2.1] text-center">
             Unlock Your Potential with Intelligent Scholar

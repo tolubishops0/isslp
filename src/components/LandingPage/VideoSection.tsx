@@ -31,7 +31,7 @@ export default function VideoSection() {
 
   return (
     <div className="py-[3.5rem]">
-      <div className="w-[90%] mx-auto">
+      <div className="w-[90%] max-w-[1400px] mx-auto">
         <h1 className="font-semibold text-lg sm:text-2xl md:text-3xl xl:text-[2rem] text-white xl:leading-[2.1] text-center">
           Elevate your learning journey with Intelligent Scholar!
         </h1>
